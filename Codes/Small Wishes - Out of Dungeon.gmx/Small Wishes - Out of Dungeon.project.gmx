@@ -33,7 +33,7 @@
     <object>objects\obj_DepthParent</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_main</room>
+    <room>rooms\rm_Main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
