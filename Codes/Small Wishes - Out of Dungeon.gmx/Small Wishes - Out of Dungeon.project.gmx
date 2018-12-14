@@ -6,14 +6,20 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Tuora</sprite>
-    <sprite>sprites\spr_Guardian</sprite>
-    <sprite>sprites\spr_Shadow</sprite>
-    <sprite>sprites\spr_Lght</sprite>
-    <sprite>sprites\spr_Block</sprite>
-    <sprite>sprites\spr_Walk</sprite>
-    <sprite>sprites\spr_WallVertical</sprite>
-    <sprite>sprites\spr_WallHorizontal</sprite>
+    <sprites name="spr_silhouette1">
+      <sprite>sprites\spr_silhouette1right</sprite>
+      <sprite>sprites\spr_silhouette1up</sprite>
+      <sprite>sprites\spr_silhouette1left</sprite>
+      <sprite>sprites\spr_silhouette1down</sprite>
+    </sprites>
+    <sprite>sprites\spr_silhouette2</sprite>
+    <sprite>sprites\spr_silhouette3</sprite>
+    <sprite>sprites\spr_shadow</sprite>
+    <sprite>sprites\spr_light</sprite>
+    <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\spr_walk</sprite>
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_wall2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -22,15 +28,15 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_Tuora</object>
-    <object>objects\obj_Guardian</object>
-    <object>objects\obj_Block</object>
-    <object>objects\obj_Walk</object>
-    <object>objects\obj_Shadow</object>
-    <object>objects\obj_Light</object>
-    <object>objects\obj_WallVertical</object>
-    <object>objects\obj_WallHorizontal</object>
-    <object>objects\obj_DepthParent</object>
+    <object>objects\obj_character</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_block</object>
+    <object>objects\obj_walk</object>
+    <object>objects\obj_shadow</object>
+    <object>objects\obj_light</object>
+    <object>objects\obj_wall</object>
+    <object>objects\obj_wall2</object>
+    <object>objects\obj_depth_parent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
