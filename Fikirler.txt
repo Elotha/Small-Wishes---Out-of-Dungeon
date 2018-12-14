@@ -19,3 +19,5 @@ Aktifleþtirilebilir checkpoint noktalarý olabilr.
 Checkpointlerimizi kendimiz yerleþtirebilmek.
 
 Iþýnlanma noktalarý.
+
+-
