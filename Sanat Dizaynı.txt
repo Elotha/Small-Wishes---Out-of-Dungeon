@@ -1,1 +1,3 @@
-Hapsedildiðimiz yerde temel ihtiyaçlarýmýzý giderebilmeliyiz.
+Alevler soluk yeþil renkte yansýn. 
+
+Dialog kutularý mavi olsun. Dialog kutularýnda yazan isim ise sarýmsý turuncu renkte olsun. Yazýlar ise beyaz.
