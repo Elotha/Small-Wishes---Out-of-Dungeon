@@ -7,13 +7,19 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_Tuora</sprite>
-    <sprite>sprites\spr_Guardian</sprite>
+    <sprites name="spr_Guardian">
+      <sprite>sprites\spr_Guardian_up</sprite>
+      <sprite>sprites\spr_Guardian_right</sprite>
+      <sprite>sprites\spr_Guardian_left</sprite>
+      <sprite>sprites\spr_Guardian_down</sprite>
+    </sprites>
     <sprite>sprites\spr_Shadow</sprite>
     <sprite>sprites\spr_Lght</sprite>
     <sprite>sprites\spr_Block</sprite>
     <sprite>sprites\spr_Walk</sprite>
     <sprite>sprites\spr_WallVertical</sprite>
     <sprite>sprites\spr_WallHorizontal</sprite>
+    <sprite>sprites\spr_range</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -21,6 +27,10 @@
     <background>background\tileset_3</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_sight.gml</script>
+    <script>scripts\scr_scale.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>
@@ -31,6 +41,7 @@
     <object>objects\obj_WallVertical</object>
     <object>objects\obj_WallHorizontal</object>
     <object>objects\obj_DepthParent</object>
+    <object>objects\obj_range</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
