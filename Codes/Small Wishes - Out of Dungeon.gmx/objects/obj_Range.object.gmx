@@ -124,7 +124,6 @@
                         {
                         invincible = true;
                         alarm[0] = 30;
-                        show_message("catch");
                         }
                     }
                 break;
@@ -136,7 +135,6 @@
                         {
                         invincible = true;
                         alarm[0] = 30;
-                        show_message("catch");
                         }
                     }
                 break;
@@ -148,7 +146,6 @@
                         {
                         invincible = true;
                         alarm[0] = 30;
-                        show_message("catch");
                         }
                     }
                 break;
@@ -160,7 +157,6 @@
                         {
                         invincible = true;
                         alarm[0] = 30;
-                        show_message("catch");
                         }
                     }
                 break;
@@ -172,7 +168,6 @@
                         {
                         invincible = true;
                         alarm[0] = 30;
-                        show_message("catch");
                         }
                     }
                 break;

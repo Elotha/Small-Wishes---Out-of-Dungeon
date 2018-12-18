@@ -38,6 +38,10 @@
       <sprite>sprites\spr_Box</sprite>
       <sprite>sprites\spr_Chest</sprite>
       <sprite>sprites\spr_Torch</sprite>
+      <sprite>sprites\spr_Checkpoint</sprite>
+    </sprites>
+    <sprites name="HUD">
+      <sprite>sprites\spr_KeyboardKey</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -58,9 +62,14 @@
     <script>scripts\scr_light.gml</script>
     <script>scripts\scr_snap.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_calibri_8</font>
+    <font>fonts\fnt_interact</font>
+  </fonts>
   <objects name="objects">
     <objects name="System">
       <object>objects\obj_Editor</object>
+      <object>objects\obj_System</object>
       <object>objects\obj_Block</object>
       <object>objects\obj_DepthParent</object>
       <object>objects\obj_TileCreator</object>
@@ -83,7 +92,12 @@
     <objects name="Environmental Objects">
       <object>objects\obj_Box</object>
       <object>objects\obj_Chest</object>
+      <object>objects\obj_ChestOpened</object>
       <object>objects\obj_Torch</object>
+      <object>objects\obj_Checkpoint</object>
+    </objects>
+    <objects name="HUD">
+      <object>objects\obj_KeyboardKey</object>
     </objects>
   </objects>
   <rooms name="rooms">
