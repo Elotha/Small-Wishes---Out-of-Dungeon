@@ -15,7 +15,10 @@
       <sprite>sprites\spr_TuoraDown</sprite>
     </sprites>
     <sprites name="Guardian">
-      <sprite>sprites\spr_Guardian</sprite>
+      <sprite>sprites\spr_GuardianRight</sprite>
+      <sprite>sprites\spr_GuardianUp</sprite>
+      <sprite>sprites\spr_GuardianLeft</sprite>
+      <sprite>sprites\spr_GuardianDown</sprite>
       <sprite>sprites\spr_ArrowOW</sprite>
       <sprite>sprites\spr_ArrowTW</sprite>
       <sprite>sprites\spr_ArrowSB</sprite>
@@ -53,6 +56,7 @@
     </scripts>
     <script>scripts\scr_guardian.gml</script>
     <script>scripts\scr_light.gml</script>
+    <script>scripts\scr_snap.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="System">
