@@ -3,34 +3,84 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <NewExtensions/>
+  <NewExtensions>
+    <extension index="0">extensions\MyFunctions</extension>
+  </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_Tuora</sprite>
-    <sprite>sprites\spr_Guardian</sprite>
-    <sprite>sprites\spr_Shadow</sprite>
-    <sprite>sprites\spr_Lght</sprite>
-    <sprite>sprites\spr_Block</sprite>
-    <sprite>sprites\spr_Walk</sprite>
-    <sprite>sprites\spr_WallVertical</sprite>
-    <sprite>sprites\spr_WallHorizontal</sprite>
+    <sprites name="Tuora">
+      <sprite>sprites\spr_TuoraRight</sprite>
+      <sprite>sprites\spr_TuoraUp</sprite>
+      <sprite>sprites\spr_TuoraLeft</sprite>
+      <sprite>sprites\spr_TuoraDown</sprite>
+    </sprites>
+    <sprites name="Guardian">
+      <sprite>sprites\spr_Guardian</sprite>
+      <sprite>sprites\spr_ArrowOW</sprite>
+      <sprite>sprites\spr_ArrowTW</sprite>
+      <sprite>sprites\spr_ArrowSB</sprite>
+      <sprite>sprites\spr_Range</sprite>
+    </sprites>
+    <sprites name="Tiles">
+      <sprite>sprites\spr_Tile</sprite>
+      <sprite>sprites\spr_WallVertical</sprite>
+      <sprite>sprites\spr_TileVertical</sprite>
+      <sprite>sprites\spr_WallHorizontal</sprite>
+      <sprite>sprites\spr_TorchLight</sprite>
+      <sprite>sprites\spr_TorchLight2</sprite>
+      <sprite>sprites\spr_Shadow</sprite>
+      <sprite>sprites\spr_Block</sprite>
+    </sprites>
+    <sprites name="Environmental Objects">
+      <sprite>sprites\spr_Box</sprite>
+      <sprite>sprites\spr_Chest</sprite>
+      <sprite>sprites\spr_Torch</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
-    <background>background\tileset_2</background>
-    <background>background\tileset_3</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Extension">
+      <script>scripts\scr_destroy_instance.gml</script>
+      <script>scripts\scr_reverse.gml</script>
+      <script>scripts\is_integer.gml</script>
+    </scripts>
+    <scripts name="Tuora">
+      <script>scripts\scr_move.gml</script>
+      <script>scripts\scr_region.gml</script>
+    </scripts>
+    <script>scripts\scr_guardian.gml</script>
+    <script>scripts\scr_light.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_Tuora</object>
-    <object>objects\obj_Guardian</object>
-    <object>objects\obj_Block</object>
-    <object>objects\obj_Walk</object>
-    <object>objects\obj_Shadow</object>
-    <object>objects\obj_Light</object>
-    <object>objects\obj_WallVertical</object>
-    <object>objects\obj_WallHorizontal</object>
-    <object>objects\obj_DepthParent</object>
+    <objects name="System">
+      <object>objects\obj_Editor</object>
+      <object>objects\obj_Block</object>
+      <object>objects\obj_DepthParent</object>
+      <object>objects\obj_TileCreator</object>
+      <object>objects\obj_WallVertical</object>
+      <object>objects\obj_WallHorizontal</object>
+      <object>objects\obj_TorchLight</object>
+      <object>objects\obj_Shadow</object>
+      <object>objects\obj_Light</object>
+    </objects>
+    <objects name="Tuora">
+      <object>objects\obj_Tuora</object>
+    </objects>
+    <objects name="Guardian">
+      <object>objects\obj_Guardian</object>
+      <object>objects\obj_ArrowOW</object>
+      <object>objects\obj_ArrowTW</object>
+      <object>objects\obj_ArrowSB</object>
+      <object>objects\obj_Range</object>
+    </objects>
+    <objects name="Environmental Objects">
+      <object>objects\obj_Box</object>
+      <object>objects\obj_Chest</object>
+      <object>objects\obj_Torch</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>

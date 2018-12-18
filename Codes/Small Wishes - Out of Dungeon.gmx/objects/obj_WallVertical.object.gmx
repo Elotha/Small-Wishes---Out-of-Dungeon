@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_DepthParent</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,21 +28,106 @@
             <string>///Depth
 
 {
-    depth = -y-96;
-    /*var wall = -1;
-    var i = 32;
-    do 
+    depth = -(y+64);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if place_meeting(x,y,obj_Tuora) 
         {
-        wall = instance_place(x,y-i,obj_WallHorizontal);
-        i += 32;
-        if i &gt; 96 then break;
+        alarm[0] = 1;
         }
-    until wall != noone
-    if wall != noone
+    else image_alpha = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Tuora">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if y+64 &gt; other.y
         {
-        depth = -(y+128-i+32);
+        if image_alpha &gt; 0.5
+            {
+            image_alpha = 0.5;
+            alarm[0] = 15;
+            }
         }
-    else depth = -(y+image_yscale*32);*/
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Tiles
+
+{
+    for(var b = 0; b &lt; image_yscale; b++)
+        {
+        for(var a = 0; a &lt; image_xscale; a++)
+            {
+            draw_sprite(spr_TileVertical,0,x+(a*32),y+(b*32));
+            }
+        a = 0;
+        }
 }
 </string>
           </argument>

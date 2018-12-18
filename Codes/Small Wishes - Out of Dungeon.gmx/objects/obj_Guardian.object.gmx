@@ -11,9 +11,9 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -25,11 +25,283 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth</string>
+            <string>///Create
+
+{
+    image_speed = 0;
+    depth = -y;
+    range = instance_create(x,y,obj_Range);
+    range.guardian = id;
+}
+</string>
           </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
-            <kind>0</kind>
-            <string>-y</string>
+            <kind>1</kind>
+            <string>///Turn Back
+
+{
+    switch(image_index)
+        {
+        case 0:
+            motion_set(180,4);
+            break;
+            
+        case 1:
+            motion_set(270,4);
+            break;
+            
+        case 2:
+            motion_set(0,4);
+            break;
+            
+        case 3:
+            motion_set(180,4);
+            break;            
+        }
+    image_index = (image_index+2) mod 4;
+    range.image_angle = direction;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ArrowSB">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if is_integer((x+16)/32) &amp;&amp; is_integer(y/32) &amp;&amp; alarm[0] = -1
+        {
+        speed = 0;
+        alarm[0] = 60;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ArrowTW">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if is_integer((x+16)/32) &amp;&amp; is_integer(y/32)
+        {
+        switch(other.image_angle)
+            {
+            case 0:
+                if direction = 180 then direction = 90; 
+                else if direction = 270 then direction = 0;
+                break;
+                
+            case 90:
+                if direction = 0 then direction = 90; 
+                else if direction = 270 then direction = 180;
+                break;
+                
+            case 180:
+                if direction = 0 then direction = 270; 
+                else if direction = 90 then direction = 180;
+                break;
+                
+            case 270:
+                if direction = 90 then direction = 0; 
+                else if direction = 180 then direction = 270;
+                break;
+            }
+        range.image_angle = direction;
+        switch(direction)
+            {
+            case 0:
+                image_index = 0;
+                break;
+                
+            case 90:
+                image_index = 1;
+                break;
+                
+            case 180:
+                image_index = 2;
+                break;
+                
+            case 270:
+                image_index = 3;
+                break;
+            }
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ArrowOW">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Collision Check
+
+{
+    if is_integer((x+16)/32) &amp;&amp; is_integer(y/32)
+        {
+        switch(other.image_angle)
+            {
+            case 0:
+                image_index = 0;
+                break;
+                
+            case 90:
+                image_index = 1;
+                break;
+                
+            case 180:
+                image_index = 2;
+                break;
+                
+            case 270:
+                image_index = 3;
+                break;
+            }
+        direction = other.image_angle;
+        range.image_angle = direction;
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>500</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring>draw_self();</codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>425</id>
+        <kind>4</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw
+
+{
+    draw_self();
+    draw_set_colour(c_red);
+    var dist;
+    switch(obj_Tuora.brightness)
+        {
+        case 0:
+            dist = 32;
+            break;
+            
+        case 1:
+            dist = 96;
+            break;
+            
+        case 2:
+            dist = 160;
+            break;
+        }
+    draw_line(x,y,x+lengthdir_x(dist,image_index*90),y+lengthdir_y(dist,image_index*90));
+}
+</string>
           </argument>
         </arguments>
       </action>
