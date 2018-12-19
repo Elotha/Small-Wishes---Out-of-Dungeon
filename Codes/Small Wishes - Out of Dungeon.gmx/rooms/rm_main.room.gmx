@@ -4,7 +4,7 @@
   <width>3072</width>
   <height>2048</height>
   <vsnap>32</vsnap>
-  <hsnap>8</hsnap>
+  <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -161,7 +161,7 @@
     <instance objName="obj_Torch" x="992" y="1408" name="inst_7B11F266" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1184" y="1088" name="inst_4B05EE12" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1056" y="1088" name="inst_722FE11C" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_WallVertical" x="1376" y="416" name="inst_A3F3E3BC" locked="0" code="" scaleX="1.03225803375244" scaleY="0.5" colour="4294967295" rotation="0"/>
+    <instance objName="obj_WallVertical" x="1376" y="416" name="inst_A3F3E3BC" locked="0" code="" scaleX="1" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1152" y="1088" name="inst_84AA15CC" locked="0" code="" scaleX="1.03225803375244" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="1056" y="1056" name="inst_0A0DF036" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="1056" y="576" name="inst_B3BE9C78" locked="0" code="" scaleX="1" scaleY="15" colour="4294967295" rotation="0"/>

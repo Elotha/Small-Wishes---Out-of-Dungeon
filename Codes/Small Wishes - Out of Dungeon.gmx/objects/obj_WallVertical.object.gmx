@@ -120,6 +120,13 @@
             <string>///Draw Tiles
 
 {
+    if image_yscale &lt; 1
+        {
+        for(var a = 0; a &lt; image_xscale; a++) 
+        draw_sprite_ext(spr_TileVertical,0,x+(a*32),y,1,image_yscale,0,c_white,1);
+        exit;
+        }
+        
     for(var b = 0; b &lt; image_yscale; b++)
         {
         for(var a = 0; a &lt; image_xscale; a++)
