@@ -1,7 +1,7 @@
 ///Guardian Movement
 
 {
-    motion_set(argument0,4);
+    motion_set(argument0,3);
     switch(direction)
         {
         case 0:

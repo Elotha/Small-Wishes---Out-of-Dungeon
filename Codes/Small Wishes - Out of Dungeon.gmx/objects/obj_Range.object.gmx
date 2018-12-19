@@ -55,7 +55,25 @@
             <string>///Angle
 
 {
-    image_angle = guardian.image_index*90;
+    switch(guardian.sprite_index)
+        {
+        case spr_GuardianRight:
+            image_angle = 0;
+            break;
+            
+        case spr_GuardianUp:
+            image_angle = 90;
+            break;
+            
+        case spr_GuardianLeft:
+            image_angle = 180;
+            break;
+            
+        case spr_GuardianDown:
+            image_angle = 270;
+            break;
+            
+        }
 }
 </string>
           </argument>
@@ -84,97 +102,6 @@
 {
     x = guardian.x;
     y = guardian.y;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_Tuora">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Collision Check
-
-{
-    if !other.invincible
-        {
-        var block = collision_line(x,y,other.x,other.y,obj_Block,false,true);
-        if block != noone then exit;
-        var dist = point_distance(guardian.x,guardian.y,other.x,other.y);
-        switch(other.brightness)
-            {
-            case 0:
-                if (dist/16) &lt;= 2
-                    {
-                    with(other)
-                        {
-                        invincible = true;
-                        alarm[0] = 30;
-                        }
-                    }
-                break;
-                
-            case 1:
-                if (dist/16) &lt;= 6
-                    {
-                    with(other)
-                        {
-                        invincible = true;
-                        alarm[0] = 30;
-                        }
-                    }
-                break;
-                
-            case 2:
-                if (dist/16) &lt;= 10
-                    {
-                    with(other)
-                        {
-                        invincible = true;
-                        alarm[0] = 30;
-                        }
-                    }
-                break;
-                
-            case 3:
-                if (dist/16) &lt;= 12
-                    {
-                    with(other)
-                        {
-                        invincible = true;
-                        alarm[0] = 30;
-                        }
-                    }
-                break;
-                
-            case 4:
-                if (dist/16) &lt;= 14
-                    {
-                    with(other)
-                        {
-                        invincible = true;
-                        alarm[0] = 30;
-                        }
-                    }
-                break;
-                
-                
-            }
-        }
 }
 </string>
           </argument>

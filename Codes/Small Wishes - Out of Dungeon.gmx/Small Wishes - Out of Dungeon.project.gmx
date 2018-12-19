@@ -37,11 +37,13 @@
     <sprites name="Environmental Objects">
       <sprite>sprites\spr_Box</sprite>
       <sprite>sprites\spr_Chest</sprite>
-      <sprite>sprites\spr_Torch</sprite>
+      <sprite>sprites\spr_Torch1</sprite>
+      <sprite>sprites\spr_Torch2</sprite>
       <sprite>sprites\spr_Checkpoint</sprite>
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_KeyboardKey</sprite>
+      <sprite>sprites\spr_Sign</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -98,6 +100,7 @@
     </objects>
     <objects name="HUD">
       <object>objects\obj_KeyboardKey</object>
+      <object>objects\obj_Sign</object>
     </objects>
   </objects>
   <rooms name="rooms">

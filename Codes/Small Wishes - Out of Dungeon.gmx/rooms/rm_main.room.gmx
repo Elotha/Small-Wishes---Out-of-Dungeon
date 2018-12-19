@@ -4,7 +4,7 @@
   <width>3072</width>
   <height>2048</height>
   <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
@@ -78,9 +78,9 @@
     <instance objName="obj_Shadow" x="1472" y="704" name="inst_2E897464" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Guardian" x="1472" y="928" name="inst_9D246403" locked="0" code="scr_guardian(0);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ArrowSB" x="1408" y="896" name="inst_1E455829" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ArrowTW" x="1536" y="928" name="inst_81C7512E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_ArrowTW" x="1664" y="928" name="inst_81C7512E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_WallVertical" x="1536" y="96" name="inst_6ADADA0C" locked="0" code="" scaleX="8" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ArrowSB" x="1536" y="832" name="inst_E9380F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ArrowSB" x="1664" y="448" name="inst_E9380F68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1600" y="416" name="inst_2D91EC7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1600" y="448" name="inst_3E7E4649" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1600" y="384" name="inst_327E1950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -114,10 +114,10 @@
     <instance objName="obj_Box" x="1280" y="768" name="inst_8FEA6FD5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Light" x="32" y="0" name="inst_FE36EA77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Torch" x="1376" y="128" name="inst_92B1FBE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="1272" y="640" name="inst_DFCA44B6" locked="0" code="torch.sprite_index = spr_TorchLight2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="1272" y="832" name="inst_89EBA3D3" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="1280" y="640" name="inst_DFCA44B6" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="1280" y="832" name="inst_89EBA3D3" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Torch" x="1624" y="128" name="inst_47FA0DB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="1776" y="768" name="inst_F8AD0858" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;torch.image_angle = 180;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="1792" y="768" name="inst_F8AD0858" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;torch.image_angle = 180;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1936" y="1248" name="inst_30BAFF04" locked="0" code="" scaleX="2.5" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1872" y="1248" name="inst_4A4AF77D" locked="0" code="" scaleX="2" scaleY="0.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="1632" y="1376" name="inst_AD14BE12" locked="0" code="" scaleX="12" scaleY="1" colour="4294967295" rotation="0"/>
@@ -158,7 +158,7 @@
     <instance objName="obj_Box" x="1536" y="1504" name="inst_997B210C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1536" y="1472" name="inst_8FF6608F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1536" y="1440" name="inst_3EACEFA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="984" y="1408" name="inst_7B11F266" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="992" y="1408" name="inst_7B11F266" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1184" y="1088" name="inst_4B05EE12" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1056" y="1088" name="inst_722FE11C" locked="0" code="" scaleX="3" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallVertical" x="1376" y="416" name="inst_A3F3E3BC" locked="0" code="" scaleX="1.03225803375244" scaleY="0.5" colour="4294967295" rotation="0"/>
@@ -185,7 +185,7 @@
     <instance objName="obj_Box" x="768" y="1408" name="inst_80357F31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Shadow" x="928" y="1472" name="inst_96E031F6" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="obj_Shadow" x="736" y="1344" name="inst_E40CB63B" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="728" y="1600" name="inst_9DE40858" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="736" y="1600" name="inst_9DE40858" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Shadow" x="992" y="1056" name="inst_01C09048" locked="0" code="" scaleX="2" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="1376" y="1056" name="inst_2E9E45CC" locked="0" code="" scaleX="1" scaleY="4" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="1408" y="1152" name="inst_D51AE42C" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
@@ -197,15 +197,15 @@
     <instance objName="obj_Shadow" x="1344" y="1632" name="inst_AC8340A0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Torch" x="1104" y="1104" name="inst_86E2616A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Box" x="1216" y="1184" name="inst_A603DF80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Torch" x="1776" y="1120" name="inst_4AD314B3" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;torch.image_angle = 180;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Torch" x="1792" y="1123" name="inst_4AD314B3" locked="0" code="torch.sprite_index = spr_TorchLight2;&#xA;torch.image_angle = 180;&#xA;sprite_index = spr_Torch2;&#xA;" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Shadow" x="1536" y="672" name="inst_6C8916B8" locked="0" code="" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Guardian" x="1664" y="864" name="inst_D18D53BC" locked="0" code="scr_guardian(0);&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ArrowOW" x="1600" y="832" name="inst_495F7B01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ArrowOW" x="1600" y="928" name="inst_99A2E201" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
-    <instance objName="obj_ArrowOW" x="1728" y="928" name="inst_65CA9C92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_ArrowOW" x="1728" y="832" name="inst_179CDCB1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
-    <instance objName="obj_Checkpoint" x="1312" y="672" name="inst_67D27F6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Checkpoint" x="1408" y="672" name="inst_58721820" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Checkpoint" x="1312" y="1088" name="inst_58721820" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_System" x="64" y="0" name="inst_FE8E3CF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Checkpoint" x="704" y="1696" name="inst_D9B93F93" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Chest" x="1792" y="1344" name="inst_A6D6F71A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Chest" x="1056" y="1184" name="inst_5D016ABC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Chest" x="736" y="1504" name="inst_8503CD04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Chest" x="1280" y="1664" name="inst_2DA4BE96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
