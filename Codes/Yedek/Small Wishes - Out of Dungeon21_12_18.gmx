@@ -26,8 +26,6 @@
     <sprite>sprites\spr_WallHorizontal</sprite>
     <sprite>sprites\spr_range</sprite>
     <sprite>sprites\spr_move</sprite>
-    <sprite>sprites\spr_wait</sprite>
-    <sprite>sprites\spr_move2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -52,7 +50,6 @@
     <object>objects\obj_DepthParent</object>
     <object>objects\obj_range</object>
     <object>objects\obj_move</object>
-    <object>objects\obj_move2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
