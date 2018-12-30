@@ -13,6 +13,8 @@ Oyuncu etrafýný yeterince görememeli, böylece ileride ne olduðuna dair tedbirli 
 
 Aktifleþtirilebilir checkpoint noktalarý olabilr.
 
+Switch ya da puzzle mantýðýnda mekanikler eklenebilir.
+
 
 ------
 

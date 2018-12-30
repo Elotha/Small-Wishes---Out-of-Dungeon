@@ -37,39 +37,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="75">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Light
-
-{
-    //K tuşuna basılı tuttuğumuz sürece ana karakterin etrafındaki ışık artar.
-    //light_size_new sadece light potion alındığı zaman geçerli olan bir değer.
-    with(obj_CharacterParent) 
-        {
-        light_size++;
-        light_size_new++;
-        }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="9" enumb="123">
       <action>
         <libid>1</libid>
@@ -229,36 +196,7 @@
 {
     if !global.editor_mode then exit;
     //visible değeri bir objenin görünür olup olmadığını belirten değerdir.
-    with(obj_Block) visible = reverse(visible);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="76">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Lives
-
-{
-    if !global.editor_mode then exit;
-    lives++;
-    health = 100;
+    with(obj_Range) visible = reverse(visible);
 }
 </string>
           </argument>
@@ -290,6 +228,22 @@
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>332</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="18">
