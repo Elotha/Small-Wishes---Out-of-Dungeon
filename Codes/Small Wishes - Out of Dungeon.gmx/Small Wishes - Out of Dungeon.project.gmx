@@ -28,7 +28,7 @@
     <sprite>sprites\spr_WallHorizontal</sprite>
     <sprite>sprites\spr_range</sprite>
     <sprite>sprites\spr_move</sprite>
-    <sprite>sprites\spr_wait</sprite>
+    <sprite>sprites\spr_Movewait</sprite>
     <sprite>sprites\spr_move2</sprite>
   </sprites>
   <backgrounds name="background">
@@ -56,6 +56,8 @@
     <object>objects\obj_range</object>
     <object>objects\obj_move</object>
     <object>objects\obj_move2</object>
+    <object>objects\obj_System</object>
+    <object>objects\obj_Movewait</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
