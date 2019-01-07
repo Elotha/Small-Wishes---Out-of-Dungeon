@@ -43,7 +43,6 @@
     <script>scripts\scr_scale.gml</script>
     <script>scripts\scr_guardmove.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>
@@ -59,10 +58,8 @@
     <object>objects\obj_move2</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_x1</room>
-    <room>rooms\room1</room>
     <room>rooms\rm_Main</room>
-    <room>rooms\rm_xmain</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

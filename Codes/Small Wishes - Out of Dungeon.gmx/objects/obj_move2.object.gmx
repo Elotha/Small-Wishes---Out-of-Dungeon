@@ -28,7 +28,7 @@
             <string>///movement-move2
 {
 
-    if collision_point(x,y,obj_Guardian,false,true)
+   // if collision_point(x,y,obj_Guardian,false,true)
 
 }
 </string>
