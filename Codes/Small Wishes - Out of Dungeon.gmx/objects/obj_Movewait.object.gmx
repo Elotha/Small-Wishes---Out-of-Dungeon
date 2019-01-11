@@ -145,7 +145,7 @@ movement_per = true
             <string>///test_mov_per
 {
 
-    show_debug_message(movement_per);
+    //show_debug_message(movement_per);
 
 }
 </string>

@@ -59,6 +59,7 @@
 
 {
 
+    obj_Movewait.movement_per = true
     direc_per = true;
 
 }
@@ -122,14 +123,14 @@
                     obj_Guardian.guardspdx=obj_Guardian.mov_spd;
                     obj_Guardian.guardspdy=0;break;
                     case 90: 
-                    obj_Guardian.guardspdx=obj_Guardian.mov_spd;
+                    obj_Guardian.guardspdx=-obj_Guardian.mov_spd;
                     obj_Guardian.guardspdy=0;break;
                     case 180: 
-                    obj_Guardian.guardspdy=obj_Guardian.mov_spd;
-                    obj_Guardian.guardspdx=0;break;
+                    obj_Guardian.guardspdx=-obj_Guardian.mov_spd;
+                    obj_Guardian.guardspdy=0;break;
                     case 270: 
-                    obj_Guardian.guardspdy=obj_Guardian.mov_spd;
-                    obj_Guardian.guardspdx=0;break;
+                    obj_Guardian.guardspdx=obj_Guardian.mov_spd;
+                    obj_Guardian.guardspdy=0;break;
                     default: 
                     obj_Guardian.guardspdx=0;obj_Guardian.guardspdy=0;break;
                 }
@@ -164,7 +165,7 @@
 {
 
    // show_debug_message(direc)
-   // show_debug_message(direc_per)
+   //show_debug_message(obj_Movewait.movement_per)
 
 }
 </string>
