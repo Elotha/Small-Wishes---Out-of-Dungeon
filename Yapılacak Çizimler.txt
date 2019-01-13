@@ -1,0 +1,19 @@
+- duvar tilelarý düzeltilecek. en son denediðimizde taþlar çok küçük demiþtik yenisini göndermedin henüz.
+- gardiyanda bir oynama yapýcam demiþtin ne olduðunu sen biliyorsun ben bilmiyorum :D
+- dikey kapýlarýn açýlmasý yapýlacak. kapalý halini çizmeye gerek yok diye düþünüyorum çünkü dikine duran kapýlar zaten duvar yüzünden gözükmüyorlar. sadece açýlmýþ halleri lazým. ama kapalý haldeyken de orada kapý olduðunu belli etmenin bir yolunu bulabilirsek harika olur.
+- checkpoint noktasý lazým 32x32'lik.. bunu çizmeden önce bir tartýþalým, nasýl bir þey uygun olur diye. bu checkpoint noktasý ayný zamanda aktifleþtirilebilir bir þey olmasý lazým. mesela evoland 2 oyununda yere çizilmiþ mühür gibi bir þey var, mavi parlýyor. üstüne gelirsen parlamasý bitiyor böylece aktif olduðunu anlýyorsun. o tip bir þey düþünülebilir.
+- odalara giriþ çýkýþ için bazý yerlerde kullanmak üzere ters U þeklinde giriþler olacak. 32x64 boyutunda bu. demek istediðimi örnekleyen bir görsel atýcam.
+- meþale çizilcek. meþalenin de yaklaþýk boyutu oyundaki gibi olsun. yine dikey ve yatay olmak üzere iki meþaleye ihtiyacýmýz var. þimdilik meþalenin kendisi ve animasyonu olsun. sonra bir de ýþýk efektini ekliycez ama onu sonraya býrakalým. bu arada bir çýlgýnlýk yapýp meþalenin alevini yeþil yapsak mý diye düþünmedim deðil :D görsel açýdan sýradan bir þey yapmak yerine sýnýrlarý belki zorlayabiliriz ama þart deðil bilemedim.
+- ana karakterin kýyafeti deðiþtirilecek. onun kýyafeti mahkumlara giydirilecek. ana karakterin ne tip bir þey giyebileceðini öncelikle tartýþalým ama.
+- üst duvarlar için de tileset yapýcaz fakat o biraz uzun iþ. duvarýn duruþuna ve birleþtiði duvarlara göre þekli deðiþtiðinden onu da sonraya býrakalým. bu iþe geçeceðimiz zaman ben kýlavuz olmasý açýsýndan hangi üst duvar tilelarýna ihtiyacýmýz olduðunu anlatan bir þema atýcam.
+- sandýk çizilecek. sandýðýn da yine yatay ve dikey versiyonu olmasý gerekiyor. bir de kapalý ve açýlmýþ hali olarak iki karelik animasyona ihtiyacýmýz var.
+- yaþlý bir mahkum çizilmesi lazým. bu mahkum, oyunun baþýnda biz hücrede beklerken, yan hücreye bir gardiyan tarafýndan hücreye getirilecek, içeri atýlacak. bu aksiyonu göstermemiz için yaþlý adamýn yukarýya doðru yürüme animasyonu lazým. (bizim hücre ve yan hücre yukarda olucak diye hesaplýyorum, o yüzden yukarý yüriycek). yaþlý adam içeri girdikten sonra gardiyan kapýyý kapatýp gidecek. yaþlý adam ardýndan hücrenin sol duvarýna yüriycek, yaslanýp oturacak. kendi kendine bir þeyler mýrýldandýktan sonra da düþüp ölecek. yani yaþlý adam için yukarý yürüme animasyonu, sola yürüme animasyonu, oturma pozu ve düþüp ölme pozu çizilecek. bu iki poz için animasyon olmasa da olur.
+- karakter, mahkum ve gardiyanlarýn altýna koymamýz için minik, yarý-saydam, yuvarlak bir gölge çizilecek.
+- dialog kutusu çizilecek. bunun için aklýmda bazý fikirler var ama bunu da baya sonraya býrakalým öncelikli deðil.
+
+zindaný biraz süslememiz de lazým. bu yüzden:
+- odalara yatak gerekiyor. hem yatay hem dikey yatak yapalým odasýna göre kullanýrýz. 
+- onun dýþýnda koridorlara falan kutular koyabiliriz diye düþünüyorum, yani bir de kutu çizilecek. benim oyuna geçici olarak koyduðum örneði boyut olarak temel al. hem yan yüzeyi hem de üst yüzeyi olarak da boyutlarý ayný olsun kutunun. ama þekli rengi falan sana kalmýþ.
+- yine odalara koymak üzere çeþme yapalým diyorum. yine dikey ve yatay olacak þekilde. elimde bunun için de bir örnek var game jamde yaptýðýmýz oyuna ait olan, o tarz bir þey yapabiliriz. çok detaylý olmasýna gerek yok ama, ufak bir þey yeterli.
+- gardiyanlarýn dinlenme odasý için masa ve sandalyeler ekleyebiliriz. 
+- temel iþler bittikten sonra gardiyanlarýn cephane odasýný süsliycez. duvarlara bir þeyler asarýz, kýlýç - mýzrak falan koyduklarý yerleri yaparýz. oraya gelince tekrar bi gözden geçiririz.

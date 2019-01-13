@@ -32,7 +32,7 @@
         {
         for(var a = 0; a &lt; image_xscale; a++)
             {
-            tile_add(tileset_1,irandom(6)*32,0,32,32,x+(a*32),y+(b*32),100000);
+            tile_add(tileset_1,irandom(7)*32,irandom(2)*32,32,32,x+(a*32),y+(b*32),100000);
             }
         a = 0;
         }
