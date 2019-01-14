@@ -58,7 +58,7 @@
             <string>///movement - move
 {
 
-    if collision_point(x-10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+10,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-10,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true   
+    if collision_point(x-7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+7,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-7,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true   
        {
        switch(image_angle)
             {
@@ -77,6 +77,8 @@
                 default: 
                 obj_Guardian.guardspdx=0;obj_Guardian.guardspdy=0;break;
             }
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
        }
     //if 
     //collision_point(x,y,obj_Guardian,false,true)

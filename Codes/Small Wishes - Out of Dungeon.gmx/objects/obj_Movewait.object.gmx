@@ -57,7 +57,7 @@
 {
 
     wait_per = true;
-
+    obj_Guardian.image_speed = obj_Guardian.img_spd
 }
 </string>
           </argument>
@@ -110,16 +110,19 @@ movement_per = true
             <string>///movement-wait
 {
 
-    if collision_point(x-10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+10,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-10,obj_Guardian,true,true) &amp;&amp; movement_per = true &amp;&amp; wait_per = true  
+    if collision_point(x-7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+7,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-7,obj_Guardian,true,true) &amp;&amp; movement_per = true &amp;&amp; wait_per = true  
        {
             obj_Guardian.guardspdy=0;
             obj_Guardian.guardspdx=0;
+            obj_Guardian.image_speed = 0;
             movement_per =false;
             wait_per = false
             alarm[0] = 45;
             alarm[1] = 60;
-       }    
-    
+         
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
+    }  
 
 }
 </string>

@@ -59,7 +59,7 @@
 
 {
 
-    obj_Movewait.movement_per = true
+    obj_Movewait.movement_per = true;
     direc_per = true;
 
 }
@@ -88,12 +88,12 @@
             <string>///movement-move2
 {
 
-    if collision_point(x-10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+10,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+10,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-10,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true     
-       {
+    if collision_point(x-7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+7,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-7,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true     
+       {      
        if sign(obj_Guardian.guardspdx) != 0 &amp;&amp; direc_per = true      
           {
-           direc_per = false
-           alarm[1] = 10
+           direc_per = false;
+           alarm[1] = 30
            switch(image_angle)
                {
                     case 0:
@@ -111,12 +111,14 @@
                     default: 
                     obj_Guardian.guardspdx=0;obj_Guardian.guardspdy=0;break;
                 }
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
           }
        
        if sign(obj_Guardian.guardspdy) !=0 &amp;&amp; direc_per = true
           {
            direc_per = false
-           alarm[1] = 10
+           alarm[1] = 30
            switch(image_angle)
                {
                     case 0:
@@ -134,6 +136,8 @@
                     default: 
                     obj_Guardian.guardspdx=0;obj_Guardian.guardspdy=0;break;
                 }
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
           }
        }
    
@@ -163,10 +167,11 @@
             <kind>1</kind>
             <string>///test
 {
-
-   // show_debug_message(direc)
+//show_debug_message(obj_Movewait.movement_per);
    //show_debug_message(obj_Movewait.movement_per)
-
+   //show_debug_message(sign(obj_Guardian.guardspdx))          
+   show_debug_message(direc_per)                                                                                         
+                                                                                  
 }
 </string>
           </argument>
