@@ -40,6 +40,9 @@
       <sprite>sprites\spr_Torch1</sprite>
       <sprite>sprites\spr_Torch2</sprite>
       <sprite>sprites\spr_Checkpoint</sprite>
+      <sprite>sprites\spr_DoorVertical</sprite>
+      <sprite>sprites\spr_DoorHorizontal</sprite>
+      <sprite>sprites\spr_Bars</sprite>
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_KeyboardKey</sprite>
@@ -97,6 +100,9 @@
       <object>objects\obj_ChestOpened</object>
       <object>objects\obj_Torch</object>
       <object>objects\obj_Checkpoint</object>
+      <object>objects\obj_DoorVertical</object>
+      <object>objects\obj_DoorHorizontal</object>
+      <object>objects\obj_Bars</object>
     </objects>
     <objects name="HUD">
       <object>objects\obj_KeyboardKey</object>
