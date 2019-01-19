@@ -43,6 +43,7 @@
       <sprite>sprites\spr_DoorVertical</sprite>
       <sprite>sprites\spr_DoorHorizontal</sprite>
       <sprite>sprites\spr_Bars</sprite>
+      <sprite>sprites\spr_Table</sprite>
     </sprites>
     <sprites name="HUD">
       <sprite>sprites\spr_KeyboardKey</sprite>
@@ -97,6 +98,7 @@
     <objects name="Environmental Objects">
       <object>objects\obj_Box</object>
       <object>objects\obj_Chest</object>
+      <object>objects\obj_Table</object>
       <object>objects\obj_ChestOpened</object>
       <object>objects\obj_Torch</object>
       <object>objects\obj_Checkpoint</object>
