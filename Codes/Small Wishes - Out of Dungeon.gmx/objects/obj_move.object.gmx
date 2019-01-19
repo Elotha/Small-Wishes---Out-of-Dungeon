@@ -56,7 +56,7 @@
           <argument>
             <kind>1</kind>
             <string>///movement - move
-{
+/*{
 
     if collision_point(x-7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+7,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-7,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true   
        {
@@ -120,7 +120,7 @@
           <argument>
             <kind>1</kind>
             <string>///test_drawpoint
- {
+ /*{
    draw_point(x,y);
    draw_point(x-10,y);
    draw_point(x+10,y);

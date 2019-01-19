@@ -60,8 +60,8 @@
     <object>objects\obj_Movewait</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Main</room>
     <room>rooms\room1</room>
+    <room>rooms\rm_Main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
