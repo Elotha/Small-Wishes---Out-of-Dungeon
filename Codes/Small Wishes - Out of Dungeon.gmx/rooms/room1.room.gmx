@@ -57,8 +57,12 @@
     <instance objName="obj_System" x="288" y="192" name="inst_B0015996" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Guardian" x="464" y="256" name="inst_E090A8FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_move" x="464" y="240" name="inst_539E1B94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_move" x="720" y="240" name="inst_ECE2DD5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
-    <instance objName="obj_Movewait" x="720" y="240" name="inst_122C1A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Movewait" x="464" y="272" name="inst_122C1A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_move2" x="720" y="240" name="inst_3EABAECB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="obj_move2" x="720" y="432" name="inst_764890F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_move2" x="464" y="432" name="inst_DAF0FFB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_move" x="464" y="272" name="inst_FA1B6142" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="270"/>
+    <instance objName="obj_Tuora" x="352" y="224" name="inst_CB03923E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tileset_3" x="288" y="192" w="32" h="32" xo="64" yo="0" id="10000928" name="inst_E244A011" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -41,6 +41,60 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///obj_move2 - create
+{
+
+    direc = 0;
+    direc_per = true
+    
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movewait - create
+{
+
+    movement_per = true;
+    wait_per =true
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -60,6 +114,139 @@
           <argument>
             <kind>0</kind>
             <string>-y</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movewait - wait_per 
+{
+
+    wait_per = true;
+    obj_Guardian.image_speed = obj_Guardian.img_spd
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///obj_move2 - direc_per 
+
+{
+
+    obj_Movewait.movement_per = true;
+    direc_per = true;
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movewait - movement_per
+{
+movement_per = true
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///look
+{
+    switch(sign(guardspdx))
+    {
+        case -1: sprite_index=spr_Guardian_left;break;    
+        case 1: sprite_index=spr_Guardian_right;break;
+    }
+    
+    switch(sign(guardspdy))
+    {
+        case -1: sprite_index=spr_Guardian_up;break;
+        case 1: sprite_index=spr_Guardian_down;break;
+    }
+    
+    switch(sprite_index)
+        {
+            case spr_Guardian_left: obj_range.image_angle=-90;break;
+            case spr_Guardian_right: obj_range.image_angle=+90;break;
+            case spr_Guardian_up: obj_range.image_angle=+180;break;
+            case spr_Guardian_down: obj_range.image_angle=0;break;
+        }
+        
+}
+                                       
+    
+
+
+</string>
           </argument>
         </arguments>
       </action>
@@ -109,37 +296,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///look
+            <string>///obj_range
 {
-    switch(sign(guardspdx))
-    {
-        case -1: sprite_index=spr_Guardian_left;break;    
-        case 1: sprite_index=spr_Guardian_right;break;
-    }
+    obj_range.x=x;
+    obj_range.y=y;
     
-    switch(sign(guardspdy))
-    {
-        case -1: sprite_index=spr_Guardian_up;break;
-        case 1: sprite_index=spr_Guardian_down;break;
-    }
-    
-    switch(sprite_index)
-        {
-            case spr_Guardian_left: obj_range.image_angle=-90;break;
-            case spr_Guardian_right: obj_range.image_angle=+90;break;
-            case spr_Guardian_up: obj_range.image_angle=+180;break;
-            case spr_Guardian_down: obj_range.image_angle=0;break;
-        }
-        
+
 }
-                                       
-    
-
-
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="4" ename="obj_Movewait">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -156,11 +325,106 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///obj_range
+            <string>///movement-wait
 {
-    obj_range.x=x;
-    obj_range.y=y;
-    
+
+    if collision_point(x-14,y-16,obj_Movewait,true,true) &amp;&amp;  collision_point(x+13,y-16,obj_Movewait,true,true) &amp;&amp;  collision_point(x,y-29,obj_Movewait,true,true) &amp;&amp; collision_point(x,y-2,obj_Movewait,true,true) &amp;&amp; movement_per = true &amp;&amp; wait_per = true  
+       {
+            guardspdy=0;
+            guardspdx=0;
+            image_speed = 0;
+            movement_per =false;
+            wait_per = false
+            alarm[0] = 45;
+            alarm[2] = 60;
+         
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
+    }  
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_move2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///movement-move2
+{
+
+    //if collision_point(x-7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x+7,y,obj_Guardian,true,true) &amp;&amp;  collision_point(x,y+7,obj_Guardian,true,true) &amp;&amp; collision_point(x,y-7,obj_Guardian,true,true) &amp;&amp; obj_Movewait.movement_per = true     
+    if collision_point(x-14,y-16,obj_move2,true,true) &amp;&amp;  collision_point(x+13,y-16,obj_move2,true,true) &amp;&amp;  collision_point(x,y-29,obj_move2,true,true) &amp;&amp; collision_point(x,y-2,obj_move2,true,true) &amp;&amp; movement_per = true          
+       {      
+       //show_message("np");
+       if sign(guardspdx) != 0 &amp;&amp; direc_per = true      
+          {
+           direc_per = false;
+           alarm[1] = 30
+           switch(other.image_angle)
+               {
+                    case 0:
+                    guardspdy=-mov_spd;
+                    guardspdx=0;break;
+                    case 90: 
+                    guardspdy=-mov_spd;
+                    guardspdx=0;break;
+                    case 180: 
+                    guardspdy=mov_spd;
+                    guardspdx=0;break;
+                    case 270: 
+                    guardspdy=mov_spd;
+                    guardspdx=0;break;
+                    default: 
+                    guardspdx=0;guardspdy=0;break;
+                }
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
+          }
+       
+       if sign(guardspdy) !=0 &amp;&amp; direc_per = true
+          {
+           direc_per = false
+           alarm[1] = 30
+           switch(other.image_angle)
+               {
+                    case 0:
+                    guardspdx=mov_spd;
+                    guardspdy=0;break;
+                    case 90: 
+                    guardspdx=-mov_spd;
+                    guardspdy=0;break;
+                    case 180: 
+                    guardspdx=-mov_spd;
+                    guardspdy=0;break;
+                    case 270: 
+                    guardspdx=mov_spd;
+                    guardspdy=0;break;
+                    default: 
+                    guardspdx=0;guardspdy=0;break;
+                }
+       //obj_Guardian.direction = image_angle;
+       //obj_Guardian.range.image_angle = obj_Guardian.direction;
+          }
+       }
+   
+   
+   // if collision_point(x,y,obj_Guardian,false,true)
 
 }
 </string>
@@ -188,7 +452,7 @@
             <string>///movement - move
 {
     
-    if collision_point(x-10,y-16,obj_move,true,true) &amp;&amp;  collision_point(x+10,y-16,obj_move,true,true) &amp;&amp;  collision_point(x,y-26,obj_move,true,true) &amp;&amp; collision_point(x,y-6,obj_move,true,true) &amp;&amp; obj_Movewait.movement_per = true   
+    if collision_point(x-14,y-16,obj_move,true,true) &amp;&amp;  collision_point(x+13,y-16,obj_move,true,true) &amp;&amp;  collision_point(x,y-29,obj_move,true,true) &amp;&amp; collision_point(x,y-2,obj_move,true,true) &amp;&amp; movement_per = true   
        {
        switch(other.image_angle)
             {
@@ -221,20 +485,6 @@
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>500</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring>draw_self();</codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -252,11 +502,10 @@
             <string>///test_drawpoint
  {
  
-   draw_point(x,y);
-   draw_point(x-7,y-16);
-   draw_point(x+7,y-16);
-   draw_point(x,y-23);
-   draw_point(x,y-9);
+   draw_point(x-14,y-16);
+   draw_point(x+13,y-16);
+   draw_point(x,y-29);
+   draw_point(x,y-2);
    
    }
 </string>
