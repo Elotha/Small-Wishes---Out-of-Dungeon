@@ -43,7 +43,6 @@
     <script>scripts\scr_scale.gml</script>
     <script>scripts\scr_guardmove.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>

@@ -233,13 +233,13 @@ movement_per = true
         case 1: sprite_index=spr_Guardian_down;break;
     }
     
-    switch(sprite_index)
+    /*switch(guardian.sprite_index)
         {
             case spr_Guardian_left: obj_range.image_angle=-90;break;
             case spr_Guardian_right: obj_range.image_angle=+90;break;
             case spr_Guardian_up: obj_range.image_angle=+180;break;
             case spr_Guardian_down: obj_range.image_angle=0;break;
-        }
+        }*/
         
 }
                                        
@@ -297,9 +297,9 @@ movement_per = true
           <argument>
             <kind>1</kind>
             <string>///obj_range
-{
-    obj_range.x=x;
-    obj_range.y=y;
+/*{
+    obj_range.x=guardian.x;
+    obj_range.y=guardian.y;
     
 
 }
