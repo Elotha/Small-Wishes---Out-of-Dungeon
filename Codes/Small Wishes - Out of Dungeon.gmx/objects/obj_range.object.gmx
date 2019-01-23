@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_range</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -155,7 +155,7 @@
           <argument>
             <kind>1</kind>
             <string> draw_self();
-    if point_distance(x,y,obj_Tuora.x,obj_Tuora.y) &lt; 130
+    /*if point_distance(x,y,obj_Tuora.x,obj_Tuora.y) &lt; 130
     {
     draw_line(obj_Tuora.x,obj_Tuora.y,x,y);
     }

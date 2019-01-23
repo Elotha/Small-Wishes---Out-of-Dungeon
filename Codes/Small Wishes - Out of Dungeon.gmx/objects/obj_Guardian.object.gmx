@@ -591,7 +591,7 @@ movement_per = true
           <argument>
             <kind>1</kind>
             <string>///test_drawpoint
- {
+ /*{
         draw_circle(x,y,10,1);
 
    draw_point(x-14,y-16);
