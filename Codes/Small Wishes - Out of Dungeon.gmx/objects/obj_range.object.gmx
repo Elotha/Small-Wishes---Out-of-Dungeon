@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_range</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -81,6 +81,44 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///location---
+/*{
+    if place_meeting(x,y,obj_Tuora) 
+    {
+        switch(obj_Tuora.brightness)
+        {
+            case 0:
+                 scr_distance(32);
+                 
+            case 2:
+                 scr_distance(112);
+                       
+            case 1:
+                 scr_distance(64);
+                 
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///look
 
 {
@@ -94,6 +132,33 @@
         }
 
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string> draw_self();
+    if point_distance(x,y,obj_Tuora.x,obj_Tuora.y) &lt; 130
+    {
+    draw_line(obj_Tuora.x,obj_Tuora.y,x,y);
+    }
 </string>
           </argument>
         </arguments>

@@ -30,6 +30,17 @@
     <sprite>sprites\spr_move</sprite>
     <sprite>sprites\spr_Movewait</sprite>
     <sprite>sprites\spr_move2</sprite>
+    <sprite>sprites\spr_Bars</sprite>
+    <sprite>sprites\spr_Box</sprite>
+    <sprite>sprites\spr_Checkpoint</sprite>
+    <sprite>sprites\spr_Chest</sprite>
+    <sprite>sprites\spr_DoorHorizontal</sprite>
+    <sprite>sprites\spr_DoorVertical</sprite>
+    <sprite>sprites\spr_Table</sprite>
+    <sprite>sprites\spr_Torch1</sprite>
+    <sprite>sprites\spr_Torch2</sprite>
+    <sprite>sprites\spr_TorchLight</sprite>
+    <sprite>sprites\spr_TorchLight2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -42,8 +53,8 @@
     <script>scripts\scr_distance.gml</script>
     <script>scripts\scr_scale.gml</script>
     <script>scripts\scr_guardmove.gml</script>
+    <script>scripts\scr_light.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>
@@ -59,10 +70,20 @@
     <object>objects\obj_move2</object>
     <object>objects\obj_System</object>
     <object>objects\obj_Movewait</object>
+    <object>objects\obj_Bars</object>
+    <object>objects\obj_Box</object>
+    <object>objects\obj_Chest</object>
+    <object>objects\obj_ChestOpened</object>
+    <object>objects\obj_DoorHorizontal</object>
+    <object>objects\obj_DoorVertical</object>
+    <object>objects\obj_Light_new</object>
+    <object>objects\obj_Table</object>
+    <object>objects\obj_Torch</object>
+    <object>objects\obj_TorchLight</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room1</room>
     <room>rooms\rm_Main</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

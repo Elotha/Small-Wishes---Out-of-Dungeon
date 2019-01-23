@@ -1,5 +1,9 @@
 ///lookbehindyou!
-{  
-   if point_distance(obj_range.x,obj_range.y,obj_Tuora.x,obj_Tuora.y) < argument0 then room_restart();
-
+{   
+          {
+           guardspdy=0;
+           guardspdx=0; 
+           image_speed=0;
+           alarm[5] = 30;
+          }
 }

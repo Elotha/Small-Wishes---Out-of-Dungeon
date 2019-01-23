@@ -35,6 +35,34 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///they've chatched you!
+{
+
+    room_restart();
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -52,20 +80,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///location
-{
+            <string>///location---
+
+/*{
     if place_meeting(x,y,obj_range) 
     {
         switch(brightness)
         {
             case 0:
-                 scr_distance(32);
+                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
                  
             case 2:
-                 scr_distance(112);
+                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
                        
             case 1:
-                 scr_distance(64);
+                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
                  
         }
     }
@@ -402,13 +440,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// test distance_guard
+            <string>/// test distance_guard---
 {
     draw_self();
-    if point_distance(obj_range.x,obj_range.y,x,y) &lt; 150 
+    /*if point_distance(obj_range.x,obj_range.y,x,y) &lt; 150 
     {
     draw_line(obj_range.x,obj_range.y,x,y);
-    }
+    }*/
 }
 </string>
           </argument>

@@ -34,6 +34,7 @@
     mov_spd = 3;
     guardspdx = 0;
     guardspdy = 0;
+    depth=-y
 }
 </string>
           </argument>
@@ -114,6 +115,34 @@
           <argument>
             <kind>0</kind>
             <string>-y</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///they've chatched you!
+{
+
+    room_restart();
+
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -275,6 +304,54 @@ movement_per = true
     y += guardspdy;
     obj_range.x += guardspdx; 
     obj_range.y += guardspdy;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///location
+{
+    if place_meeting(obj_Tuora.x,obj_Tuora.y,obj_range) 
+    {
+        switch(obj_Tuora.brightness)
+        {
+            case 0:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                 
+            case 2:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                       
+            case 1:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    //scr_distance();
+                    room_restart();
+                 }
+                 
+        }
+    }
 }
 </string>
           </argument>
@@ -515,7 +592,8 @@ movement_per = true
             <kind>1</kind>
             <string>///test_drawpoint
  {
- 
+        draw_circle(x,y,10,1);
+
    draw_point(x-14,y-16);
    draw_point(x+13,y-16);
    draw_point(x,y-29);
