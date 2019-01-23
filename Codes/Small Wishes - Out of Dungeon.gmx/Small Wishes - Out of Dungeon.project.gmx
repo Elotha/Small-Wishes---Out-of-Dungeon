@@ -8,6 +8,11 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="spr_Prisoner">
+      <sprite>sprites\spr_Prisoner_up</sprite>
+      <sprite>sprites\spr_Prisoner_down</sprite>
+      <sprite>sprites\spr_Prisoner_right</sprite>
+    </sprites>
     <sprites name="spr_Tuora">
       <sprite>sprites\spr_Tuora_down</sprite>
       <sprite>sprites\spr_Tuora_up</sprite>
@@ -39,8 +44,12 @@
     <sprite>sprites\spr_Table</sprite>
     <sprite>sprites\spr_Torch1</sprite>
     <sprite>sprites\spr_Torch2</sprite>
+    <sprite>sprites\spr_TorchGreen</sprite>
     <sprite>sprites\spr_TorchLight</sprite>
     <sprite>sprites\spr_TorchLight2</sprite>
+    <sprite>sprites\spr_BedVertical</sprite>
+    <sprite>sprites\spr_Chair</sprite>
+    <sprite>sprites\spr_ChairRight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -55,6 +64,7 @@
     <script>scripts\scr_guardmove.gml</script>
     <script>scripts\scr_light.gml</script>
   </scripts>
+  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>
