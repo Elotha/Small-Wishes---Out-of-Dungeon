@@ -27,8 +27,9 @@
             <kind>1</kind>
             <string>///create
 {
-
     brightness=1 ;
+    img_spd = 5/30
+    
 }
 </string>
           </argument>
@@ -139,6 +140,74 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Movement
+
+{
+    image_speed = 0;
+    //image_index = 0
+    if place_meeting(x,y,obj_Shadow) brightness = 0;
+       else if place_meeting(x,y,obj_Light) brightness = 2;
+            else brightness=1;
+
+    if keyboard_check_direct(vk_left)
+    {
+        if !collision_point(x-16,y-3,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_left
+            x-=5
+            image_speed = img_spd;
+        } 
+    }
+    
+    if keyboard_check_direct(vk_right)
+    {
+        if !collision_point(x+17,y-3,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_right
+            x+=5
+            image_speed = img_spd;
+        } 
+    }
+    if keyboard_check_direct(vk_up)
+    {
+        if !collision_point(x,y-13,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_up
+            y-=5
+            image_speed = img_spd;
+        } 
+    }
+    if keyboard_check_direct(vk_down)
+    {
+        if !collision_point(x,y+13,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_down
+            y+=5
+            image_speed = img_spd;
+        } 
+    }
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="40">
       <action>
@@ -158,12 +227,15 @@
           <argument>
             <kind>1</kind>
             <string>///check_down
-{
+/*{
 
     if !collision_point(x,y+13,obj_Walk,true,true) then y+=10
     if place_meeting(x,y,obj_Shadow) brightness = 0;
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
+            
+    //image_speed = obj_Guardian.img_spd;
+            
 }
 </string>
           </argument>
@@ -190,34 +262,6 @@
           <argument>
             <kind>0</kind>
             <string>-y</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_Tuora_down</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -240,42 +284,16 @@
           <argument>
             <kind>1</kind>
             <string>///check_right
-{
+/*{
 
     if !collision_point(x+17,y-3,obj_Walk,true,true) then x+=10
     if place_meeting(x,y,obj_Shadow) brightness = 0;
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
+            
+            
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_Tuora_right</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -298,12 +316,15 @@
           <argument>
             <kind>1</kind>
             <string>///check_up
-{
+/*{
 
     if !collision_point(x,y-13,obj_Walk,true,true) then y-=10
     if place_meeting(x,y,obj_Shadow) brightness = 0;
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
+            
+    //image_speed = img_spd;
+            
 }
 </string>
           </argument>
@@ -333,34 +354,6 @@
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_Tuora_up</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="5" enumb="37">
       <action>
@@ -380,45 +373,18 @@
           <argument>
             <kind>1</kind>
             <string>///check_left
-{
-
+/*{
+    
     if !collision_point(x-16,y-3,obj_Walk,true,true) then x-=10
     if place_meeting(x,y,obj_Shadow) brightness = 0;
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
          
+    //image_speed = img_spd;
        
     
 }
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_Tuora_left</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>

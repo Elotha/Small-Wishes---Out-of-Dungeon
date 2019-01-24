@@ -29,8 +29,8 @@
 
 {
     depth = -y-64;
-    torch = instance_create(x+4,y+16,obj_TorchLight);
-    torch.depth = -y-64;
+    torch = instance_create(x,y+8,obj_TorchLight);
+    torch.depth = -y-96;
     image_speed = 1/3;
 }
 </string>

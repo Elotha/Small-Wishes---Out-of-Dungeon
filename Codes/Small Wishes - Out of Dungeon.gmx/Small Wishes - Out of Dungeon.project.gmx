@@ -10,7 +10,7 @@
   <sprites name="sprites">
     <sprites name="spr_Prisoner">
       <sprite>sprites\spr_Prisoner_up</sprite>
-      <sprite>sprites\spr_Prisoner_down</sprite>
+      <sprite>sprites\spr_Prisoner_left</sprite>
       <sprite>sprites\spr_Prisoner_right</sprite>
     </sprites>
     <sprites name="spr_Tuora">
@@ -50,6 +50,7 @@
     <sprite>sprites\spr_BedVertical</sprite>
     <sprite>sprites\spr_Chair</sprite>
     <sprite>sprites\spr_ChairRight</sprite>
+    <sprite>sprites\sprite36</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -64,10 +65,10 @@
     <script>scripts\scr_guardmove.gml</script>
     <script>scripts\scr_light.gml</script>
   </scripts>
-  <fonts name="fonts"/>
   <objects name="objects">
     <object>objects\obj_Tuora</object>
     <object>objects\obj_Guardian</object>
+    <object>objects\obj_Prisoner</object>
     <object>objects\obj_Block</object>
     <object>objects\obj_Walk</object>
     <object>objects\obj_Shadow</object>
@@ -89,7 +90,12 @@
     <object>objects\obj_Light_new</object>
     <object>objects\obj_Table</object>
     <object>objects\obj_Torch</object>
+    <object>objects\obj_Torch2</object>
     <object>objects\obj_TorchLight</object>
+    <object>objects\obj_BedVertical</object>
+    <object>objects\obj_Chair</object>
+    <object>objects\obj_ChairRight</object>
+    <object>objects\obj_TorchLight2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Main</room>
