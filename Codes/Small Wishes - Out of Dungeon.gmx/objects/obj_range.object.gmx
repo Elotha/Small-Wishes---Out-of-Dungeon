@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_range</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -119,6 +119,57 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///location---
+{    
+    //if place_meeting(obj_Tuora.x,obj_Tuora.y,obj_range)
+    if  collision_point(obj_Tuora.x,obj_Tuora.y,obj_Guardian.range,true,true) 
+    {
+        show_message("heyaa");
+        switch(obj_Tuora.brightness)
+        {
+            case 0:
+            
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                 
+            case 2:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                 
+            case 1:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    //scr_distance();
+                    room_restart();
+                 }
+                 
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///look
 
 {
@@ -132,6 +183,68 @@
         }
 
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Tuora">
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///hadi_gulum---
+/*{
+ show_message("cmoon");
+    switch(obj_Tuora.brightness)
+        {
+            case 0:
+            
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                 
+            case 2:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    scr_distance();
+                 }
+                 
+            case 1:
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 {
+                    //scr_distance();
+                    room_restart();
+                 }
+        }
+}        
 </string>
           </argument>
         </arguments>

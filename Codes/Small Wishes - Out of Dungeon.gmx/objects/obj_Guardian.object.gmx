@@ -25,37 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///create
-{
-    range = instance_create(x,y,obj_range);
-    range.guardian = id;
-    img_spd = 5/30;
-    image_speed = img_spd;
-    mov_spd = 3;
-    guardspdx = 0;
-    guardspdy = 0;
-    depth=-y
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///obj_move2 - create
 {
 
@@ -115,6 +84,37 @@
           <argument>
             <kind>0</kind>
             <string>-y</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///create
+{
+    range = instance_create(x,y,obj_range);
+    range.guardian = id;
+    img_spd = 5/30;
+    image_speed = img_spd;
+    mov_spd = 3;
+    guardspdx = 0;
+    guardspdy = 0;
+    depth=-y
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -326,7 +326,7 @@ movement_per = true
           <argument>
             <kind>1</kind>
             <string>///location
-{
+/*{
     if place_meeting(obj_Tuora.x,obj_Tuora.y,obj_range) 
     {
         switch(obj_Tuora.brightness)

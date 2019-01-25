@@ -28,7 +28,7 @@
             <string>///Light
 
 {
-    scr_light(96,c_white,0,0);
+    scr_light(96,c_green,0,0);
 }
 </string>
           </argument>
