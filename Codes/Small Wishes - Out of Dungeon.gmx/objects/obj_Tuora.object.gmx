@@ -36,34 +36,6 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///they've chatched you!
-{
-
-    room_restart();
-
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -81,28 +53,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///location---
+            <string>///location
 
-/*{
-    if place_meeting(x,y,obj_range) 
-    {
+{
+    if place_meeting(x,y,obj_range)
+    //instance_nearest(x,y,obj_range) 
+    {    
+
         switch(brightness)
         {
             case 0:
-                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 with(instance_nearest(x,y,obj_range))
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
                  {
                     scr_distance();
                  }
                  
             case 2:
-                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 with(instance_nearest(x,y,obj_range))
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
                  {
                     scr_distance();
                  }
                        
             case 1:
-                 if point_distance(obj_range.guardian.x,obj_range.guardian.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Guardian.x,obj_Guardian.y,x,y,obj_Box,true,true)
+                 with(instance_nearest(x,y,obj_Guardian))
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
                  {
+                    show_message("ehh")
                     scr_distance();
                  }
                  
@@ -133,7 +111,7 @@
 
 {
 
-    //show_debug_message(brightness);
+    show_debug_message(brightness);
 
 }
 </string>
@@ -204,68 +182,6 @@
     }
 
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_range">
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///hadi_gulum--
-/*{
- show_message("cmoon");
-    switch(brightness)
-        {
-            case 0:
-            
-                 if point_distance(obj_range.x,obj_range.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_range.x,obj_range.y,x,y,obj_Box,true,true)
-                 {
-                    scr_distance();
-                 }
-                 
-            case 2:
-                 if point_distance(obj_range.x,obj_range.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_range.x,obj_range.y,x,y,obj_Box,true,true)
-                 {
-                    scr_distance();
-                 }
-                 
-            case 1:
-                 if point_distance(obj_range.x,obj_range.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_range.x,obj_range.y,x,y,obj_Box,true,true)
-                 {
-                    //scr_distance();
-                    room_restart();
-                 }
-        }
-}        
 </string>
           </argument>
         </arguments>
