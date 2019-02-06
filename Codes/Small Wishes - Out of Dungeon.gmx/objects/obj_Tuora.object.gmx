@@ -28,8 +28,11 @@
             <string>///create
 {
     brightness=1 ;
-    img_spd = 5/30
-    
+    img_spd = 5/30;
+    mov_spd = 3;
+    sight = true;
+    hor_mov = 0;
+    ver_mov = 0;
 }
 </string>
           </argument>
@@ -53,36 +56,119 @@
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Movement
+
+{
+
+    hor_mov = sign(keyboard_check_direct(vk_right)) - sign(keyboard_check_direct(vk_left));
+    ver_mov = sign(keyboard_check_direct(vk_up)) - sign(keyboard_check_direct(vk_down)) ;
+
+//    keyboard_check_direct(ord("vk_right")) - keyboard_check_direct(ord("vk_left")) = hor_mov;
+//    keyboard_check_direct(ord("vk_up")) - keyboard_check_direct(ord("vk_down")) = ver_mov;
+
+
+    //image_speed = 0;
+    //image_index = 0
+    if place_meeting(x,y,obj_Shadow) brightness = 0;
+       else if place_meeting(x,y,obj_Light) brightness = 2;
+            else brightness=1;
+
+    if hor_mov = -1
+    {
+        if !collision_point(x-17,y-3,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_left
+            x-=mov_spd
+            image_speed = img_spd;
+        } 
+    }
+    
+    if hor_mov = 1
+    {
+        if !collision_point(x+17,y-3,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_right
+            x+=mov_spd
+            image_speed = img_spd;
+        } 
+    }
+    
+    if ver_mov = 1
+    {
+        if !collision_point(x,y-13,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_up
+            y-=mov_spd
+            image_speed = img_spd;
+        } 
+    }
+    
+    if ver_mov = -1
+    {
+        if !collision_point(x,y+13,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_down
+            y+=mov_spd
+            image_speed = img_spd;
+        } 
+    }
+    
+    if ver_mov = 0 &amp;&amp; hor_mov = 0
+    {
+        image_index = 0
+        image_speed = 0
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///location
 
 {
-    if place_meeting(x,y,obj_range)
+    if place_meeting(x,y,obj_range) &amp;&amp; sight = true
     //instance_nearest(x,y,obj_range) 
     {    
-
+//show_message("ss")
         switch(brightness)
         {
             case 0:
-                 with(instance_nearest(x,y,obj_range))
-                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+            
+                 with(instance_nearest(x,y,obj_Guardian))
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 
                  {
                     scr_distance();
-                 }
+                 }break;
                  
             case 2:
-                 with(instance_nearest(x,y,obj_range))
-                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 with(instance_nearest(x,y,obj_Guardian))
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 112
                  {
                     scr_distance();
-                 }
-                       
+                 }break;
+                 
             case 1:
                  with(instance_nearest(x,y,obj_Guardian))
-                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 &amp;&amp; !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
+                 if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 64 
                  {
-                    show_message("ehh")
                     scr_distance();
-                 }
+                 }break;
                  
         }
     }
@@ -134,53 +220,130 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement
-
+            <string>///Movement_meh---
+/*
 {
-    image_speed = 0;
+    sign(keyboard_check_direct(vk_right)) - sign(keyboard_check_direct(vk_left)) = hor_mov;
+    sign(keyboard_check_direct(vk_up)) - sign(keyboard_check_direct(vk_down)) = ver_mov;
+
+
+    //image_speed = 0;
     //image_index = 0
     if place_meeting(x,y,obj_Shadow) brightness = 0;
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
 
-    if keyboard_check_direct(vk_left)
+    switch(keyboard_key)
     {
+        case vk_left:
+        case ord("A"):
         if !collision_point(x-16,y-3,obj_Walk,true,true)
         {
             sprite_index = spr_Tuora_left
-            x-=5
+            x-=mov_spd
             image_speed = img_spd;
-        } 
-    }
-    
-    if keyboard_check_direct(vk_right)
-    {
+        };
+        
+        case vk_right:
+        case ord("D"):
         if !collision_point(x+17,y-3,obj_Walk,true,true)
         {
             sprite_index = spr_Tuora_right
-            x+=5
+            x+=mov_spd
             image_speed = img_spd;
-        } 
-    }
-    if keyboard_check_direct(vk_up)
-    {
-        if !collision_point(x,y-13,obj_Walk,true,true)
-        {
-            sprite_index = spr_Tuora_up
-            y-=5
-            image_speed = img_spd;
-        } 
-    }
-    if keyboard_check_direct(vk_down)
-    {
+        } ;
+        break;
+        
+        case vk_down:
+        case ord("S"):
         if !collision_point(x,y+13,obj_Walk,true,true)
         {
             sprite_index = spr_Tuora_down
-            y+=5
+            y+=mov_spd
             image_speed = img_spd;
-        } 
+        };
+        
+        case vk_up:
+        case ord("W"):
+        if !collision_point(x,y-13,obj_Walk,true,true)
+        {
+            sprite_index = spr_Tuora_up
+            y-=mov_spd
+            image_speed = img_spd;
+        };
+        break;
+        
+        default: 
+        image_speed = 0;
+        image_index = 0;break;
     }
 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Chest 
+{
+
+   if collision_point(x-17,y-3,obj_Chest,true,true) || collision_point(x+17,y-3,obj_Chest,true,true) || collision_point(x,y-13,obj_Chest,true,true) || collision_point(x,y+13,obj_Chest,true,true)
+      {
+      with(instance_nearest(x,y,obj_Chest))
+      {
+      sprite_index = spr_ChestOpen;
+      }
+      
+      
+      
+      }
+  /*  if hor_mov = -1
+    {
+        if collision_point(x-17,y-3,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if hor_mov = 1
+    {
+        if !collision_point(x+17,y-3,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = 1
+    {
+        if !collision_point(x,y-13,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = -1
+    {
+        if !collision_point(x,y+13,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }*/
+   
 }
 </string>
           </argument>
@@ -384,13 +547,39 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// test distance_guard---
+            <string>/// test distance_guard
 {
     draw_self();
-    /*if point_distance(obj_range.x,obj_range.y,x,y) &lt; 150 
+    if point_distance(obj_range.x,obj_range.y,x,y) &lt; 150 
     {
     draw_line(obj_range.x,obj_range.y,x,y);
-    }*/
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw_caught
+
+{
+    if !sight draw_sprite(spr_warning,0,x,y-38);
+
 }
 </string>
           </argument>

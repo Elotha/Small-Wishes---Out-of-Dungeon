@@ -38,6 +38,7 @@
     <sprite>sprites\spr_Box</sprite>
     <sprite>sprites\spr_Checkpoint</sprite>
     <sprite>sprites\spr_Chest</sprite>
+    <sprite>sprites\spr_ChestOpen</sprite>
     <sprite>sprites\spr_DoorHorizontal</sprite>
     <sprite>sprites\spr_DoorVertical</sprite>
     <sprite>sprites\spr_Table</sprite>
@@ -49,8 +50,7 @@
     <sprite>sprites\spr_BedVertical</sprite>
     <sprite>sprites\spr_Chair</sprite>
     <sprite>sprites\spr_ChairRight</sprite>
-    <sprite>sprites\sprite36</sprite>
-    <sprite>sprites\sprite37</sprite>
+    <sprite>sprites\spr_warning</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -65,6 +65,7 @@
     <script>scripts\scr_scale.gml</script>
     <script>scripts\scr_guardmove.gml</script>
     <script>scripts\scr_light.gml</script>
+    <script>scripts\scr_chest.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
@@ -73,11 +74,12 @@
       <object>objects\obj_Prisoner</object>
     </objects>
     <objects name="System">
-      <object>objects\obj_System</object>
       <object>objects\obj_Light</object>
+      <object>objects\obj_System</object>
       <object>objects\obj_Walk</object>
       <object>objects\obj_Shadow</object>
-      <object>objects\obj_cam</object>
+      <object>objects\obj_Cam</object>
+      <object>objects\obj_Checkpoint</object>
     </objects>
     <objects name="Environments">
       <object>objects\obj_Chest</object>

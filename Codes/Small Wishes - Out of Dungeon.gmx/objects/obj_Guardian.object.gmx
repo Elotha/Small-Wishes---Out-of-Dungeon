@@ -113,6 +113,37 @@
     guardspdx = 0;
     guardspdy = 0;
     depth=-y
+    hop = 10
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///hop_hop_hop
+{
+    y -= hop;
+    hop = hop*-1; 
+    image_index += sign(hop)
+    alarm[6] = 15;
+
 }
 </string>
           </argument>
@@ -138,9 +169,12 @@
             <kind>1</kind>
             <string>///they've chatched you!
 {
-
-    room_restart();
-
+     room_restart();   
+     guardspdy=0;
+     guardspdx=0;
+     img_spd=0;
+     obj_Tuora.sight = true
+     movement_per = true
 }
 </string>
           </argument>
@@ -168,7 +202,7 @@
 {
 
     wait_per = true;
-    obj_Guardian.image_speed = obj_Guardian.img_spd
+    //obj_Guardian.image_speed = obj_Guardian.img_spd
 }
 </string>
           </argument>
@@ -224,7 +258,11 @@
             <kind>1</kind>
             <string>///movewait - movement_per
 {
-movement_per = true
+    with(self)
+    {
+        movement_per = true
+        image_speed = img_spd
+    }
 }
 </string>
           </argument>
@@ -325,7 +363,7 @@ movement_per = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///location
+            <string>///location---
 /*{
     if place_meeting(obj_Tuora.x,obj_Tuora.y,obj_range) 
     {
@@ -373,7 +411,7 @@ movement_per = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///obj_range
+            <string>///obj_range---
 /*{
     obj_range.x=guardian.x;
     obj_range.y=guardian.y;
@@ -406,15 +444,18 @@ movement_per = true
 {
 
     if collision_point(x-14,y-16,obj_Movewait,true,true) &amp;&amp;  collision_point(x+13,y-16,obj_Movewait,true,true) &amp;&amp;  collision_point(x,y-29,obj_Movewait,true,true) &amp;&amp; collision_point(x,y-2,obj_Movewait,true,true) &amp;&amp; movement_per = true &amp;&amp; wait_per = true  
+       
        {
-            guardspdy=0;
-            guardspdx=0;
-            image_speed = 0;
-            movement_per =false;
-            wait_per = false
-            alarm[0] = 45;
-            alarm[2] = 60;
-         
+            //with(instance_nearest(x,y,obj_Guardian))
+            {
+                guardspdy=0;
+                guardspdx=0;
+                image_speed = 0;
+                movement_per =false;
+                wait_per = false
+                alarm[0] = 45;
+                alarm[2] = 60;
+            }             
        //obj_Guardian.direction = image_angle;
        //obj_Guardian.range.image_angle = obj_Guardian.direction;
     }  
@@ -590,7 +631,7 @@ movement_per = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///test_drawpoint
+            <string>///test_drawpoint---
  /*{
         draw_circle(x,y,10,1);
 
