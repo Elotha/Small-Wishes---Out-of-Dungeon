@@ -28,7 +28,7 @@
             <string>///Depth
 
 {
-    depth = -y-96;
+    depth = -y-32*2;
     /*var wall = -1;
     var i = 32;
     do 
