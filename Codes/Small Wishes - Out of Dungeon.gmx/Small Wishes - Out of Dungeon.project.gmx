@@ -51,6 +51,7 @@
     <sprite>sprites\spr_Chair</sprite>
     <sprite>sprites\spr_ChairRight</sprite>
     <sprite>sprites\spr_warning</sprite>
+    <sprite>sprites\spr_DoorVertical2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -83,9 +84,9 @@
     </objects>
     <objects name="Environments">
       <object>objects\obj_Chest</object>
+      <object>objects\obj_ChestOpened</object>
       <object>objects\obj_WallVertical</object>
       <object>objects\obj_Box</object>
-      <object>objects\obj_ChestOpened</object>
       <object>objects\obj_Bars</object>
       <object>objects\obj_DoorVertical</object>
       <object>objects\obj_Table</object>

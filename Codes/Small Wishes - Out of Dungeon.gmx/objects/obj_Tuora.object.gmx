@@ -349,6 +349,72 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///door
+{
+
+   if collision_point(x-17,y-3,obj_DoorVertical,true,true) || collision_point(x+17,y-3,obj_DoorVertical,true,true) || collision_point(x,y-13,obj_DoorVertical,true,true) || collision_point(x,y+13,obj_DoorVertical,true,true)
+      {
+      with(instance_nearest(x,y,obj_DoorVertical))
+      {
+      sprite_index = spr_DoorVertical2;
+      }
+      
+      
+      
+      }
+  /*  if hor_mov = -1
+    {
+        if collision_point(x-17,y-3,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if hor_mov = 1
+    {
+        if !collision_point(x+17,y-3,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = 1
+    {
+        if !collision_point(x,y-13,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = -1
+    {
+        if !collision_point(x,y+13,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }*/
+   
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="40">
       <action>
