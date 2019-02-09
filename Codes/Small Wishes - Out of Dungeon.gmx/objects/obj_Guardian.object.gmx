@@ -169,12 +169,21 @@
             <kind>1</kind>
             <string>///they've chatched you!
 {
-     room_restart();   
-     guardspdy=0;
+    if global.checkR != -1
+    {
+        room_goto(global.checkR);  
+    }
+    else
+    {
+        room_restart();
+        //instance_destroy(obj_Tuora);
+        //instance_create(global.checkpoint.x,global.checkpoint.y,obj_Tuora);
+    }
+     /*guardspdy=0;
      guardspdx=0;
      img_spd=0;
      obj_Tuora.sight = true
-     movement_per = true
+     movement_per = true*/
 }
 </string>
           </argument>

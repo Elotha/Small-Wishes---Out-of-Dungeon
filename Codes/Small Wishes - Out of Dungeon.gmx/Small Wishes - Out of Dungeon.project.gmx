@@ -13,6 +13,13 @@
       <sprite>sprites\spr_Prisoner_right</sprite>
     </sprites>
     <sprites name="spr_Tuora">
+      <sprite>sprites\spr_Tuora_downx</sprite>
+      <sprite>sprites\spr_Tuora_upx</sprite>
+      <sprite>sprites\spr_Tuora_rightx</sprite>
+      <sprite>sprites\spr_Tuora_leftx</sprite>
+      <sprite>sprites\spr_TuoraEyes_down</sprite>
+      <sprite>sprites\spr_TuoraEyes_right</sprite>
+      <sprite>sprites\spr_TuoraEyes_left</sprite>
       <sprite>sprites\spr_Tuora_down</sprite>
       <sprite>sprites\spr_Tuora_up</sprite>
       <sprite>sprites\spr_Tuora_right</sprite>
@@ -52,6 +59,8 @@
     <sprite>sprites\spr_ChairRight</sprite>
     <sprite>sprites\spr_warning</sprite>
     <sprite>sprites\spr_DoorVertical2</sprite>
+    <sprite>sprites\spr_Fountain</sprite>
+    <sprite>sprites\spr_ChestVertical</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -59,6 +68,7 @@
     <background>background\tileset_3</background>
     <background>background\tileset_x</background>
     <background>background\background4</background>
+    <background>background\tileset_x2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -67,6 +77,7 @@
     <script>scripts\scr_guardmove.gml</script>
     <script>scripts\scr_light.gml</script>
     <script>scripts\scr_chest.gml</script>
+    <script>scripts\script5.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Characters">
@@ -98,6 +109,7 @@
       <object>objects\obj_BedVertical</object>
       <object>objects\obj_TorchLight</object>
       <object>objects\obj_TorchLight2</object>
+      <object>objects\obj_Fountain</object>
     </objects>
     <object>objects\obj_Block</object>
     <object>objects\obj_WallHorizontal</object>
@@ -107,8 +119,10 @@
     <object>objects\obj_move2</object>
     <object>objects\obj_Movewait</object>
     <object>objects\obj_Light_new</object>
+    <object>objects\obj_ChestVertical</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_configure</room>
     <room>rooms\rm_Main</room>
     <room>rooms\room1</room>
   </rooms>

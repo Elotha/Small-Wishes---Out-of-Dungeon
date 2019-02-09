@@ -33,6 +33,11 @@
     sight = true;
     hor_mov = 0;
     ver_mov = 0;
+    if global.checkR = room
+    {
+     x = global.checkx;
+     y = global.checky;   
+    }
 }
 </string>
           </argument>
@@ -149,6 +154,7 @@
         switch(brightness)
         {
             case 0:
+
             
                  with(instance_nearest(x,y,obj_Guardian))
                  if point_distance(obj_Tuora.x,obj_Tuora.y,x,y) &lt; 32 
@@ -172,6 +178,12 @@
                  
         }
     }
+    
+    if brightness != 0 
+    {
+     if image_alpha &lt; 1 then image_alpha += 0.15 
+     }
+    
 }
 </string>
           </argument>
@@ -193,11 +205,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///test_brightness
+            <string>///test_brightness---
 
 {
 
-    show_debug_message(brightness);
+ //   show_debug_message(brightness);
 
 }
 </string>
@@ -415,6 +427,143 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Checkpoint---
+
+{
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Checkpoint">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check, please !
+
+{    
+     if global.checkpoint != other.id &amp;&amp; other.image_index = 0
+        {
+            with(other)
+            {
+            global.checkpoint = id
+            global.checkx = x
+            global.checkR = room
+            global.checky = y
+            }
+        }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_Shadow">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///alpha
+
+{
+
+    if image_alpha &gt; 0.05 then image_alpha -= 0.04;// else image_alpha = 1
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="83">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_alpha = 1;
+show_message(global.checkpoint.x);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>    if image_alpha &gt; 0.5 then image_alpha -= 0.04;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="40">
       <action>
@@ -596,6 +745,36 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///check_start
+
+{
+
+x = global.checkpoint.x
+y = global.checkpoint.y
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -614,7 +793,7 @@
           <argument>
             <kind>1</kind>
             <string>/// test distance_guard
-{
+/*{
     draw_self();
     if point_distance(obj_range.x,obj_range.y,x,y) &lt; 150 
     {
@@ -647,6 +826,55 @@
     if !sight draw_sprite(spr_warning,0,x,y-38);
 
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///shadow_alpha
+
+    draw_self();
+
+    if brightness = 0
+    
+    {
+    
+        if sprite_index = spr_Tuora_left //hor_mov = -1
+        {
+            draw_sprite(spr_TuoraEyes_left,0,x,y)
+        }
+        
+        if sprite_index = spr_Tuora_right //hor_mov = 1
+        {
+            draw_sprite(spr_TuoraEyes_right,0,x,y)
+        }
+        
+        if ver_mov = 1
+        {
+            draw_self();
+        }
+        
+        if sprite_index = spr_Tuora_down //ver_mov = -1
+        {
+        draw_sprite(spr_TuoraEyes_down,0,x,y)
+        }
+    
+    }
 </string>
           </argument>
         </arguments>
