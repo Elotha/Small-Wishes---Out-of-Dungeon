@@ -69,6 +69,7 @@
     <background>background\tileset_x</background>
     <background>background\background4</background>
     <background>background\tileset_x2</background>
+    <background>background\tileset_x3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">

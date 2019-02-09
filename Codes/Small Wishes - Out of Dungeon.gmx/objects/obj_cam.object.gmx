@@ -81,10 +81,10 @@
 y = obj_Tuora.y
 
 
-    clamp(bright,60,360)
+    clamp(bright,190,360)
 if obj_Tuora.brightness = 0 
    {
-        if bright &gt; 70 
+        if bright &gt; 180
            {
                 bright -= 8
            }

@@ -510,7 +510,7 @@
 
 {
 
-    if image_alpha &gt; 0.05 then image_alpha -= 0.04;// else image_alpha = 1
+    if image_alpha &gt; 0.03 then image_alpha -= 0.04;// else image_alpha = 1
 
 }
 </string>
@@ -739,36 +739,6 @@ show_message(global.checkpoint.x);
     //image_speed = img_spd;
        
     
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///check_start
-
-{
-
-x = global.checkpoint.x
-y = global.checkpoint.y
-
 }
 </string>
           </argument>
