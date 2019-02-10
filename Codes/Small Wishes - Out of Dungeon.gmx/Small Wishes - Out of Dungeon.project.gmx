@@ -48,6 +48,7 @@
     <sprite>sprites\spr_ChestOpen</sprite>
     <sprite>sprites\spr_DoorHorizontal</sprite>
     <sprite>sprites\spr_DoorVertical</sprite>
+    <sprite>sprites\spr_DoorVertical2</sprite>
     <sprite>sprites\spr_Table</sprite>
     <sprite>sprites\spr_Torch1</sprite>
     <sprite>sprites\spr_Torch2</sprite>
@@ -58,7 +59,6 @@
     <sprite>sprites\spr_Chair</sprite>
     <sprite>sprites\spr_ChairRight</sprite>
     <sprite>sprites\spr_warning</sprite>
-    <sprite>sprites\spr_DoorVertical2</sprite>
     <sprite>sprites\spr_Fountain</sprite>
     <sprite>sprites\spr_ChestVertical</sprite>
   </sprites>
@@ -111,6 +111,7 @@
       <object>objects\obj_TorchLight</object>
       <object>objects\obj_TorchLight2</object>
       <object>objects\obj_Fountain</object>
+      <object>objects\obj_ChestVertical</object>
     </objects>
     <object>objects\obj_Block</object>
     <object>objects\obj_WallHorizontal</object>
@@ -120,7 +121,6 @@
     <object>objects\obj_move2</object>
     <object>objects\obj_Movewait</object>
     <object>objects\obj_Light_new</object>
-    <object>objects\obj_ChestVertical</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_configure</room>

@@ -139,10 +139,10 @@
             <kind>1</kind>
             <string>///hop_hop_hop
 {
-    y -= hop;
+   /* y -= hop;
     hop = hop*-1; 
     image_index += sign(hop)
-    alarm[6] = 15;
+    alarm[6] = 15;*/
 
 }
 </string>
@@ -460,6 +460,7 @@
                 guardspdy=0;
                 guardspdx=0;
                 image_speed = 0;
+                image_index = 0;
                 movement_per =false;
                 wait_per = false
                 alarm[0] = 45;

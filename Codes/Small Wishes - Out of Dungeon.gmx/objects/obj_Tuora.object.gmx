@@ -28,8 +28,8 @@
             <string>///create
 {
     brightness=1 ;
-    img_spd = 5/30;
-    mov_spd = 3;
+    img_spd = 8/30;
+    mov_spd = 5;
     sight = true;
     hor_mov = 0;
     ver_mov = 0;
@@ -316,11 +316,14 @@
 
    if collision_point(x-17,y-3,obj_Chest,true,true) || collision_point(x+17,y-3,obj_Chest,true,true) || collision_point(x,y-13,obj_Chest,true,true) || collision_point(x,y+13,obj_Chest,true,true)
       {
-      with(instance_nearest(x,y,obj_Chest))
-      {
-      sprite_index = spr_ChestOpen;
-      }
       
+          if keyboard_check_direct(ord('E'))
+          {
+              with(instance_nearest(x,y,obj_Chest))
+              {
+              sprite_index = spr_ChestOpen;
+              }
+          }
       
       
       }
@@ -385,6 +388,7 @@
       with(instance_nearest(x,y,obj_DoorVertical))
       {
       sprite_index = spr_DoorVertical2;
+           //if collision_point(x-17,y-3,obj_DoorVertical,true,true) then image_xscale = -1
       }
       
       
@@ -447,6 +451,36 @@
 
 {
 
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_WallVertical">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///alpha
+
+{
+    with(other)
+    {        
+        if image_alpha &gt; 0.4 then image_alpha -= 0.07;// else image_alpha = 1
+    }
 }
 </string>
           </argument>

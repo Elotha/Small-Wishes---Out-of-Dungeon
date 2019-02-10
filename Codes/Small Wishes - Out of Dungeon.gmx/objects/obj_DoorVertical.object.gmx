@@ -29,8 +29,8 @@
 
 {
 
-    open = true
-    
+    open = true;
+    depth = -y;
 
 }
 </string>

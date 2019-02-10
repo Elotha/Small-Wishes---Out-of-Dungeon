@@ -2,7 +2,7 @@
 {   
     if !collision_line(obj_Tuora.x,obj_Tuora.y,x,y,obj_Box,true,true)
           {
-           alarm[5] = 120;    
+           alarm[5] = 60;    
            alarm[6] = 1     
            movement_per = false;
            obj_Tuora.sight = false;
