@@ -61,6 +61,7 @@
     <sprite>sprites\spr_warning</sprite>
     <sprite>sprites\spr_Fountain</sprite>
     <sprite>sprites\spr_ChestVertical</sprite>
+    <sprite>sprites\spr_DialogBox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tileset_1</background>
@@ -78,9 +79,18 @@
     <script>scripts\scr_guardmove.gml</script>
     <script>scripts\scr_light.gml</script>
     <script>scripts\scr_chest.gml</script>
-    <script>scripts\script5.gml</script>
+    <script>scripts\scr_dialog.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_gungsuh</font>
+  </fonts>
   <objects name="objects">
+    <objects name="Dialogue">
+      <object>objects\obj_Speaker</object>
+      <object>objects\obj_Dialogue</object>
+      <object>objects\obj_Uratun</object>
+      <object>objects\obj_sign</object>
+    </objects>
     <objects name="Characters">
       <object>objects\obj_Tuora</object>
       <object>objects\obj_Guardian</object>
@@ -121,10 +131,12 @@
     <object>objects\obj_move2</object>
     <object>objects\obj_Movewait</object>
     <object>objects\obj_Light_new</object>
+    <object>objects\obj_DialogBox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_configure</room>
     <room>rooms\rm_Main</room>
+    <room>rooms\rm_chitchat</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

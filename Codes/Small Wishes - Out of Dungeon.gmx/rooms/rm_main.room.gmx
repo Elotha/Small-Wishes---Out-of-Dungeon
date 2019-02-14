@@ -216,6 +216,7 @@
     <instance objName="obj_ChestVertical" x="128" y="768" name="inst_79B9929B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="672" y="432" name="inst_C76D0B45" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallHorizontal" x="480" y="960" name="inst_58B32EA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sign" x="704" y="352" name="inst_2EDDE062" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tileset_3" x="672" y="672" w="32" h="32" xo="0" yo="0" id="10000702" name="inst_4BE7DFB9" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

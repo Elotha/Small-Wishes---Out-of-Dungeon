@@ -38,6 +38,7 @@
      x = global.checkx;
      y = global.checky;   
     }
+    chat = false;
 }
 </string>
           </argument>
@@ -67,7 +68,7 @@
 
     hor_mov = sign(keyboard_check_direct(vk_right)) - sign(keyboard_check_direct(vk_left));
     ver_mov = sign(keyboard_check_direct(vk_up)) - sign(keyboard_check_direct(vk_down)) ;
-
+    
 //    keyboard_check_direct(ord("vk_right")) - keyboard_check_direct(ord("vk_left")) = hor_mov;
 //    keyboard_check_direct(ord("vk_up")) - keyboard_check_direct(ord("vk_down")) = ver_mov;
 
@@ -78,7 +79,7 @@
        else if place_meeting(x,y,obj_Light) brightness = 2;
             else brightness=1;
 
-    if hor_mov = -1
+    if hor_mov = -1 &amp;&amp; !chat
     {
         if !collision_point(x-17,y-3,obj_Walk,true,true)
         {
@@ -88,7 +89,7 @@
         } 
     }
     
-    if hor_mov = 1
+    if hor_mov = 1 &amp;&amp; !chat
     {
         if !collision_point(x+17,y-3,obj_Walk,true,true)
         {
@@ -98,7 +99,7 @@
         } 
     }
     
-    if ver_mov = 1
+    if ver_mov = 1 &amp;&amp; !chat
     {
         if !collision_point(x,y-13,obj_Walk,true,true)
         {
@@ -108,7 +109,7 @@
         } 
     }
     
-    if ver_mov = -1
+    if ver_mov = -1 &amp;&amp; !chat
     {
         if !collision_point(x,y+13,obj_Walk,true,true)
         {
@@ -123,6 +124,9 @@
         image_index = 0
         image_speed = 0
     }
+    
+    
+    
 }
 </string>
           </argument>
@@ -144,7 +148,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///location
+            <string>///Location
 
 {
     if place_meeting(x,y,obj_range) &amp;&amp; sight = true
@@ -205,11 +209,209 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///test_brightness---
+            <string>///Chest 
+{
+
+   if collision_point(x-17,y-3,obj_Chest,true,true) || collision_point(x+17,y-3,obj_Chest,true,true) || collision_point(x,y-13,obj_Chest,true,true) || collision_point(x,y+13,obj_Chest,true,true)
+      {
+      
+          if keyboard_check_direct(ord('E'))
+          {
+              with(instance_nearest(x,y,obj_Chest))
+              {
+              sprite_index = spr_ChestOpen;
+              }
+          }
+      
+      
+      }
+  /*  if hor_mov = -1
+    {
+        if collision_point(x-17,y-3,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if hor_mov = 1
+    {
+        if !collision_point(x+17,y-3,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = 1
+    {
+        if !collision_point(x,y-13,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = -1
+    {
+        if !collision_point(x,y+13,obj_Chest,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }*/
+   
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Door
+{
+
+   if collision_point(x-17,y-3,obj_DoorVertical,true,true) || collision_point(x+17,y-3,obj_DoorVertical,true,true) || collision_point(x,y-13,obj_DoorVertical,true,true) || collision_point(x,y+13,obj_DoorVertical,true,true)
+      {
+      with(instance_nearest(x,y,obj_DoorVertical))
+      {
+      sprite_index = spr_DoorVertical2;
+           //if collision_point(x-17,y-3,obj_DoorVertical,true,true) then image_xscale = -1
+      }
+      
+      
+      
+      }
+  /*  if hor_mov = -1
+    {
+        if collision_point(x-17,y-3,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if hor_mov = 1
+    {
+        if !collision_point(x+17,y-3,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = 1
+    {
+        if !collision_point(x,y-13,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }
+    
+    if ver_mov = -1
+    {
+        if !collision_point(x,y+13,obj_DoorVertical,true,true)
+        {
+            ver_mov = 0 &amp;&amp; hor_mov = 0
+        } 
+    }*/
+   
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///GoTalk
 
 {
 
- //   show_debug_message(brightness);
+    if collision_circle(x,y-16,64,obj_sign,true,true)
+    {
+        if keyboard_check_pressed(ord('F'))
+        {  
+            with(instance_nearest(x,y,obj_sign))
+            {
+                if !instance_exists(dialog)
+                { 
+                    dialog = instance_create(x+xoffset,y+yoffset,obj_Dialogue);
+                    dialog.text = text; //check it
+                }
+                
+                else
+                {
+                    dialog.text_page ++;
+                    dialog.text_count = 0;
+                    /*if (dialog.text_page &gt; array_length_1d(dialog.text)-1);
+                    {
+                        with(dialog)
+                        {
+                            instance_destroy();
+                        }
+                    }*/
+                }
+            }
+        
+        
+            
+            
+            
+            
+            /*var talker, receiver
+            global.talker = collision_circle(x,y-16,64,obj_Uratun,true,true);
+            global.receiver = self;
+            scr_dialog();
+            chat = true;*/
+
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Checkpoint---
+
+{
 
 }
 </string>
@@ -311,145 +513,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Chest 
-{
-
-   if collision_point(x-17,y-3,obj_Chest,true,true) || collision_point(x+17,y-3,obj_Chest,true,true) || collision_point(x,y-13,obj_Chest,true,true) || collision_point(x,y+13,obj_Chest,true,true)
-      {
-      
-          if keyboard_check_direct(ord('E'))
-          {
-              with(instance_nearest(x,y,obj_Chest))
-              {
-              sprite_index = spr_ChestOpen;
-              }
-          }
-      
-      
-      }
-  /*  if hor_mov = -1
-    {
-        if collision_point(x-17,y-3,obj_Chest,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if hor_mov = 1
-    {
-        if !collision_point(x+17,y-3,obj_Chest,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if ver_mov = 1
-    {
-        if !collision_point(x,y-13,obj_Chest,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if ver_mov = -1
-    {
-        if !collision_point(x,y+13,obj_Chest,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }*/
-   
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///door
-{
-
-   if collision_point(x-17,y-3,obj_DoorVertical,true,true) || collision_point(x+17,y-3,obj_DoorVertical,true,true) || collision_point(x,y-13,obj_DoorVertical,true,true) || collision_point(x,y+13,obj_DoorVertical,true,true)
-      {
-      with(instance_nearest(x,y,obj_DoorVertical))
-      {
-      sprite_index = spr_DoorVertical2;
-           //if collision_point(x-17,y-3,obj_DoorVertical,true,true) then image_xscale = -1
-      }
-      
-      
-      
-      }
-  /*  if hor_mov = -1
-    {
-        if collision_point(x-17,y-3,obj_DoorVertical,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if hor_mov = 1
-    {
-        if !collision_point(x+17,y-3,obj_DoorVertical,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if ver_mov = 1
-    {
-        if !collision_point(x,y-13,obj_DoorVertical,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }
-    
-    if ver_mov = -1
-    {
-        if !collision_point(x,y+13,obj_DoorVertical,true,true)
-        {
-            ver_mov = 0 &amp;&amp; hor_mov = 0
-        } 
-    }*/
-   
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Checkpoint---
+            <string>///test_brightness---
 
 {
+
+ //   show_debug_message(brightness);
 
 }
 </string>

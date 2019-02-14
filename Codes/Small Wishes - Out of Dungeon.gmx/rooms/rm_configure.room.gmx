@@ -14,6 +14,9 @@
 global.checkx = -1;
 global.checkR = -1;
 global.checky = -1;
+global.talker = -1;
+global.receiver = -1;
+
 
 room_goto_next();</code>
   <enableViews>0</enableViews>
