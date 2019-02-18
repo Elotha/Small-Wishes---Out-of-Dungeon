@@ -35,10 +35,10 @@
     
     dialog = noone;
     dialog_page = 0;
-    xoffset = -32;
-    yoffset = -32;
+    xoffset = +32;
+    yoffset = +32;
     text[0] = "HMMM nasıl gidiyor dostum ?";
-    text[1] = "hom hom hom hom";
+    text[1] = "hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom";
     text[2] = "anlıyorum...";
     text[3] = "en iyisi ben senin içinden geçeyim";
 }

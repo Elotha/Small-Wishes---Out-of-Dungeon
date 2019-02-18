@@ -28,20 +28,78 @@
             <string>///Create_inherited
 
 {
-
+    
     event_inherited();
+    
+    // 0 = TUORA
+    // 1 = URATUN
 
-    
-    
+           
     dialog = noone;
     dialog_page = 0;
     xoffset = -32;
     yoffset = -32;
     text[0] = "HMMM nasil gidiyor dostum ?";
-    text[1] = "hom hom hom hom";
+    text[1] = "hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom hom";
     text[2] = "anliyorum...";
     text[3] = "en iyisi ben senin icinden geceyim";
-        text[4] = "BOOOOOOOOOOOOOOOOOOM";
+    text[4] = "BOOOOOOOOOOOOOOOOOOM";
+
+    talker[0] = "Uratun";
+    talker[1] = "Tuora";
+    talker[2] = "Uratun";
+    talker[3] = "Uratun";
+    talker[4] = "Tuora";
+    talker[5] = "f";
+    
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///HEY, who's talkin?--
+
+/*{
+    if talker != noone
+    {
+        if talker = Uratun
+        {        
+        draw_set_colour(c_white);        
+        draw_set_font(fnt_minecraft);
+        draw_text_ext(32,view_hport[0]-160,"Uratun",-1,width - (gap * 2))
+        }
+        
+        if talker = Tuora
+        {
+            draw_text_ext(32,view_hport[0]-160,"Tuora",-1,width - (gap * 2))
+        }
+        
+    }
+    
+    else
+    {
+        draw_text_ext(32,view_hport[0]-160,"?????",-1,width - (gap * 2))
+        
+    }
+
 }
 </string>
           </argument>

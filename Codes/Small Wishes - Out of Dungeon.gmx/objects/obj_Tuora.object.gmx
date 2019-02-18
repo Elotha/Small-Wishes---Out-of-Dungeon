@@ -353,30 +353,33 @@
     {
         if keyboard_check_pressed(ord('F'))
         {  
+           //show_message(view_hview[0]);
+           //show_message(view_hport[0]);
             with(instance_nearest(x,y,obj_sign))
             {
                 if !instance_exists(dialog)
                 { 
-                    dialog = instance_create(x+xoffset,y+yoffset,obj_Dialogue);
+                    //dialog = instance_create(x+xoffset,y+yoffset,obj_Dialogue);
+                    dialog = instance_create(view_xview[0],view_yview[0]+view_hview-96,obj_Dialogue);
                     dialog.text = text; //check it
+                    dialog.talker = talker;
                 }
                 
                 else
                 {
                     dialog.text_page ++;
-                    dialog.text_count = 0;
-                    /*if (dialog.text_page &gt; array_length_1d(dialog.text)-1);
+                    dialog.text_count = 0;}
+                    
+                if (dialog.text_page &gt; array_length_1d(dialog.text)-1)
+                {
+                    with(dialog)
                     {
-                        with(dialog)
-                        {
-                            instance_destroy();
-                        }
-                    }*/
-                }
+                        instance_destroy();
+                    }
+                }     
+
+                
             }
-        
-        
-            
             
             
             

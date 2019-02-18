@@ -28,15 +28,18 @@
             <string>///create
 
 {
-
+    talker = noone;
     text = noone;
     text_visible = "";
     text_page = 0;
     text_count = 0;
-    text_spd = 0.5;
-    display_scale = display_get_gui_width()/view_wview[0];
-    width = sprite_width * display_scale;
+    text_spd = 0.8;
+    display_scale = display_get_gui_width()/view_wview[0];  //must check for happenings
+    width = sprite_width * display_scale;  //check
     gap = 8;
+    depth= -1000000;
+    global.talker = 0;
+
 }
 </string>
           </argument>
@@ -69,8 +72,63 @@
     var xx = (x - view_xview[0]) * display_scale;
     var yy = (y - view_yview[0]) * display_scale;
     draw_set_colour(c_white);
-    draw_text_ext(xx + gap,yy + gap,text_visible,-1,width - (gap * 2));
+    draw_set_font(fnt_minecraft);
+    //draw_text_ext(xx + gap,yy + gap,text_visible,-1,width - (gap * 2));
+    draw_text_ext(32,view_hport[0]-128,text_visible,-1,width - (gap * 2));
+    //draw_text_ext(32,view_hport[0]-160,global.talker,-1,width - (gap * 2))
+
+    talker_visible = talker[text_page] ;
+    draw_text_ext(32,view_hport[0]-160,talker_visible,-1,width - (gap * 2));
+
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///HEY, who's talkin?---
+/*{
+// 0 = Tuora
+// 1 = Uratun
+   
+
+    if global.talker != noone
+    {
+        if global.talker = URATUN
+        {        
+        //draw_set_colour(c_white);        
+        //draw_set_font(fnt_minecraft);
+        draw_text_ext(32,view_hport[0]-160,"Uratun",-1,width - (gap * 2))
+        }
+        
+        if global.talker = TUORA
+        {
+            draw_text_ext(32,view_hport[0]-160,"Tuora",-1,width - (gap * 2))
+        }
+        
+    }
     
+    else
+    {
+        draw_text_ext(32,view_hport[0]-160,"?????",-1,width - (gap * 2))
+        
+    }
+
 }
 </string>
           </argument>

@@ -83,13 +83,14 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gungsuh</font>
+    <font>fonts\fnt_minecraft</font>
   </fonts>
   <objects name="objects">
     <objects name="Dialogue">
       <object>objects\obj_Speaker</object>
       <object>objects\obj_Dialogue</object>
-      <object>objects\obj_Uratun</object>
       <object>objects\obj_sign</object>
+      <object>objects\obj_Uratun</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_Tuora</object>
@@ -139,6 +140,10 @@
     <room>rooms\rm_chitchat</room>
     <room>rooms\room1</room>
   </rooms>
+  <constants number="2">
+    <constant name="TUORA">0</constant>
+    <constant name="URATUN">1</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
